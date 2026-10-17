@@ -92,13 +92,15 @@ upgrade-insecure-requests;
         }
 
         .logo img {
-            max-height: 60px;
+            max-height: 75px;
             border-radius: 50px;
         }
 
         .logo {
             width: 60px;
             object-fit: contain;
+            display: flex;
+            justify-content: center;
         }
 
         .cart-icon {
@@ -1369,6 +1371,48 @@ MENU BANDAS
 }
 
 
+
+/* Botão Voltar ao Topo */
+#btnVoltarTopo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    background-color: #128337;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#btnVoltarTopo:hover {
+    background-color: #0d6429;
+    transform: translateY(-4px);
+}
+
+#btnVoltarTopo.visivel {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    #btnVoltarTopo {
+        right: 15px;
+        bottom: 15px;
+        width: 44px;
+        height: 44px;
+    }
+}
+
+
+
     </style>
 </head>
 
@@ -2000,6 +2044,351 @@ MENU BANDAS
                 </div>
             </div>
 
+
+
+<!-- ANTHRAX -->
+<div class="card" data-banda="ANTHRAX" onclick="selecionarProduto('CAMISETA ANTHRAX')">
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/ANTHRAX.jpeg?raw=true" alt="CAMISETA ANTHRAX">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/ANTHRAX3.jpeg?raw=true" alt="CAMISETA ANTHRAX">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="info">
+        <p class="nome-produto">CAMISETA ANTHRAX</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+<!-- THE DOORS -->
+<div class="card" data-banda="THE DOORS" onclick="selecionarProduto('CAMISETA THE DOORS')">
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/THEDOORS.jpeg?raw=true" alt="CAMISETA THE DOORS">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/THEDOORS3.jpeg?raw=true" alt="CAMISETA THE DOORS">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="info">
+        <p class="nome-produto">CAMISETA THE DOORS</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+<!-- LINKIN PARK -->
+<div class="card" data-banda="LINKIN PARK" onclick="selecionarProduto('CAMISETA LINKIN PARK')">
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/LINKINPARK.jpeg?raw=true" alt="CAMISETA LINKIN PARK">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/LINKINPARK3.jpeg?raw=true" alt="CAMISETA LINKIN PARK">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="info">
+        <p class="nome-produto">CAMISETA LINKIN PARK</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+<!-- LED ZEPPELIN -->
+<div class="card" data-banda="LED ZEPPELIN" onclick="selecionarProduto('CAMISETA LED ZEPPELIN')">
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/LEDZEPPELIN.jpeg?raw=true" alt="CAMISETA LED ZEPPELIN">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/LEDZEPPELIN3.jpeg?raw=true" alt="CAMISETA LED ZEPPELIN">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="info">
+        <p class="nome-produto">CAMISETA LED ZEPPELIN</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+<!-- MEGADETH -->
+<div class="card" data-banda="MEGADETH" onclick="selecionarProduto('CAMISETA MEGADETH')">
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/MEGADETH.jpeg?raw=true" alt="CAMISETA MEGADETH">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/MEGADETH3.jpeg?raw=true" alt="CAMISETA MEGADETH">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="info">
+        <p class="nome-produto">CAMISETA MEGADETH</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+<!-- SLAYER -->
+<div class="card" data-banda="SLAYER" onclick="selecionarProduto('CAMISETA SLAYER')">
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/SLAYER.jpeg?raw=true" alt="CAMISETA SLAYER">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/SLAYER3.jpeg?raw=true" alt="CAMISETA SLAYER">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="info">
+        <p class="nome-produto">CAMISETA SLAYER</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+<!-- JUDAS PRIEST -->
+<div class="card" data-banda="JUDAS PRIEST" onclick="selecionarProduto('CAMISETA JUDAS PRIEST')">
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/JUDASPRIEST.jpeg?raw=true" alt="CAMISETA JUDAS PRIEST">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/JUDASPRIEST3.jpeg?raw=true" alt="CAMISETA JUDAS PRIEST">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="info">
+        <p class="nome-produto">CAMISETA JUDAS PRIEST</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+<!-- CHARLIE BROWN JR -->
+<div class="card" data-banda="CHARLIE BROWN JR" onclick="selecionarProduto('CAMISETA CHARLIE BROWN JR')">
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/CHARLIEBROWNJ R.jpeg?raw=true" alt="CAMISETA CHARLIE BROWN JR">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/CHARLIEBROWNJR3.jpeg?raw=true" alt="CAMISETA CHARLIE BROWN JR">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="info">
+        <p class="nome-produto">CAMISETA CHARLIE BROWN JR</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+<!-- BLACK SABBATH -->
+<div class="card" data-banda="BLACK SABBATH" onclick="selecionarProduto('CAMISETA BLACK SABBATH')">
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/BLACKSABBATH.jpeg?raw=true" alt="CAMISETA BLACK SABBATH">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/BLACKSABBATH3.jpeg?raw=true" alt="CAMISETA BLACK SABBATH">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="info">
+        <p class="nome-produto">CAMISETA BLACK SABBATH</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+<!-- SLIPKNOT -->
+<div class="card" data-banda="SLIPKNOT" onclick="selecionarProduto('CAMISETA SLIPKNOT')">
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/SLIPKNOT.jpeg?raw=true" alt="CAMISETA SLIPKNOT">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/SLIPKNOT3.jpeg?raw=true" alt="CAMISETA SLIPKNOT">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="info">
+        <p class="nome-produto">CAMISETA SLIPKNOT</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+<!-- SYSTEM OF A DOWN -->
+<div class="card" data-banda="SYSTEM OF A DOWN" onclick="selecionarProduto('CAMISETA SYSTEM OF A DOWN')">
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/SYSTEMOFADOWN.jpeg?raw=true" alt="CAMISETA SYSTEM OF A DOWN">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/SYSTEMOFADOWN3.jpeg?raw=true" alt="CAMISETA SYSTEM OF A DOWN">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="info">
+        <p class="nome-produto">CAMISETA SYSTEM OF A DOWN</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+<!-- GREEN DAY -->
+<div class="card" data-banda="GREEN DAY" onclick="selecionarProduto('CAMISETA GREEN DAY')">
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/GREENDAY.jpeg?raw=true" alt="CAMISETA GREEN DAY">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/GREENDAY3.jpeg?raw=true" alt="CAMISETA GREEN DAY">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="info">
+        <p class="nome-produto">CAMISETA GREEN DAY</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+<!-- KORN -->
+<div class="card" data-banda="KORN" onclick="selecionarProduto('CAMISETA KORN')">
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/KORN.jpeg?raw=true" alt="CAMISETA KORN">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/KORN3.jpeg?raw=true" alt="CAMISETA KORN">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="info">
+        <p class="nome-produto">CAMISETA KORN</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+<!-- NIRVANA -->
+<div class="card" data-banda="NIRVANA" onclick="selecionarProduto('CAMISETA NIRVANA')">
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/NIRVANA.jpeg?raw=true" alt="CAMISETA NIRVANA">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/NIRVANA3.jpeg?raw=true" alt="CAMISETA NIRVANA">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="info">
+        <p class="nome-produto">CAMISETA NIRVANA</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+<!-- SEX PISTOLS -->
+<div class="card" data-banda="SEX PISTOLS" onclick="selecionarProduto('CAMISETA SEX PISTOLS')">
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/SEXPISTOLS.jpeg?raw=true" alt="CAMISETA SEX PISTOLS">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/SEXPISTOLS3.jpeg?raw=true" alt="CAMISETA SEX PISTOLS">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="info">
+        <p class="nome-produto">CAMISETA SEX PISTOLS</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+<!-- RED HOT CHILI PEPPERS -->
+<div class="card" data-banda="RED HOT CHILI PEPPERS" onclick="selecionarProduto('CAMISETA RED HOT CHILI PEPPERS')">
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/REDHOTCHILIPEPPERS.jpeg?raw=true" alt="CAMISETA RED HOT CHILI PEPPERS">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/REDHOTCHILIPEPPERS3.jpeg?raw=true" alt="CAMISETA RED HOT CHILI PEPPERS">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="info">
+        <p class="nome-produto">CAMISETA RED HOT CHILI PEPPERS</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+<!-- MOTORHEAD -->
+<div class="card" data-banda="MOTORHEAD" onclick="selecionarProduto('CAMISETA MOTORHEAD')">
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/MOTORHEAD.jpeg?raw=true" alt="CAMISETA MOTORHEAD">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/MOTORHEAD3.jpeg?raw=true" alt="CAMISETA MOTORHEAD">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="info">
+        <p class="nome-produto">CAMISETA MOTORHEAD</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+<!-- PANTERA -->
+<div class="card" data-banda="PANTERA" onclick="selecionarProduto('CAMISETA PANTERA')">
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/PANTERA.jpeg?raw=true" alt="CAMISETA PANTERA">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/PANTERA3.jpeg?raw=true" alt="CAMISETA PANTERA">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="info">
+        <p class="nome-produto">CAMISETA PANTERA</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+
             
 
 
@@ -2217,6 +2606,13 @@ MENU BANDAS
         </div>
         <button onclick="adicionarAoCarrinho()">Adicionar ao carrinho</button>
     </div>
+
+    
+<!-- Botão Voltar ao Topo -->
+<button id="btnVoltarTopo" aria-label="Voltar ao topo" title="Voltar ao topo">
+    <i class="fa-solid fa-chevron-up"></i>
+</button>
+
 
 
 
@@ -3544,6 +3940,24 @@ function filtrarPorBanda(banda) {
     });
 }
 
+/*voltar ao topo*/
+
+const btnVoltarTopo = document.getElementById('btnVoltarTopo');
+
+window.addEventListener('scroll', function () {
+    if (window.scrollY > 300) {
+        btnVoltarTopo.classList.add('visivel');
+    } else {
+        btnVoltarTopo.classList.remove('visivel');
+    }
+});
+
+btnVoltarTopo.addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
 
 
 
