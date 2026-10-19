@@ -2,22 +2,22 @@
 <html lang="pt-br">
 
 <head>
-<head>
 
-    <meta charset="UTF-8">
+    <head>
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta name="referrer" content="strict-origin-when-cross-origin">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="color-scheme" content="light">
+        <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <meta name="theme-color" content="#000000">
+        <meta name="color-scheme" content="light">
 
-    <meta http-equiv="Content-Security-Policy"
-content="
+        <meta name="theme-color" content="#000000">
+
+        <meta http-equiv="Content-Security-Policy" content="
 default-src 'self';
 script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
 style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
@@ -32,1423 +32,1450 @@ upgrade-insecure-requests;
 ">
 
 
-    <title>Camisetas de bandas</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #ffffff;
-            color: #000;
-            font-family: Arial, sans-serif;
-            margin: auto;
-            width: 100%;
-            max-width: 1040px;
+        <title>Camisetas de bandas</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <style>
+            body {
+                background-color: #ffffff;
+                color: #000;
+                font-family: Arial, sans-serif;
+                margin: auto;
+                width: 100%;
+                max-width: 1040px;
 
-        }
+            }
 
-        body>h1 {
-            display: flex;
-            justify-content: center;
-        }
+            body>h1 {
+                display: flex;
+                justify-content: center;
+            }
 
-        .barra-topo {
-            height: 35px;
-            font-weight: 700;
-            background: #000;
-            color: #ffffff;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-        }
-
-
-        #produtoSelecionado>img {
-            border: 1px solid #000;
-        }
+            .barra-topo {
+                height: 35px;
+                font-weight: 700;
+                background: #000;
+                color: #ffffff;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
 
 
-
-        header {
-            background-color: #ffffff;
-            padding: 10px;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: auto;
-            position: relative;
+            #produtoSelecionado>img {
+                border: 1px solid #000;
+            }
 
 
-        }
 
-        .home-icon i,
-        .cart-icon i {
-            font-size: 34px;
-            color: #000;
-        }
+            header {
+                background-color: #ffffff;
+                padding: 10px;
+            }
 
-        .logo img {
-            max-height: 75px;
-            border-radius: 50px;
-        }
-
-        .logo {
-            width: 60px;
-            object-fit: contain;
-            display: flex;
-            justify-content: center;
-        }
-
-        .cart-icon {
-            position: relative;
-            cursor: pointer;
-        }
-
-        .cart-count {
-            position: absolute;
-            top: 12px;
-            right: 2px;
-            /*background-color: #000;*/
-            color: #fff;
-            font-size: 0.6em;
-            font-weight: bold;
-            padding: 4px 8px;
-            border-radius: 50%;
-            width: 10px;
-            height: 15px;
-            text-align: center;
-            /*border: 4px solid #ffffff;*/
-        }
-
-        /*----------------------------------*/
+            .header-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 1200px;
+                margin: auto;
+                position: relative;
 
 
-        @media (max-width: 768px) {
+            }
+
+            .home-icon i,
+            .cart-icon i {
+                font-size: 34px;
+                color: #000;
+            }
+
+            .logo img {
+                max-height: 75px;
+                border-radius: 50px;
+            }
+
+            .logo {
+                width: 60px;
+                object-fit: contain;
+                display: flex;
+                justify-content: center;
+            }
+
+            .cart-icon {
+                position: relative;
+                cursor: pointer;
+            }
+
+            .cart-count {
+                position: absolute;
+                top: 12px;
+                right: 2px;
+                /*background-color: #000;*/
+                color: #fff;
+                font-size: 0.6em;
+                font-weight: bold;
+                padding: 4px 8px;
+                border-radius: 50%;
+                width: 10px;
+                height: 15px;
+                text-align: center;
+                /*border: 4px solid #ffffff;*/
+            }
+
+            /*----------------------------------*/
+
+
+            @media (max-width: 768px) {
+
+                .swiper-button-prev,
+                .swiper-button-next {
+                    display: none;
+                }
+            }
+
+            .banner-container {
+                position: relative;
+                width: 100%;
+                height: auto;
+                /* Ajuste a altura conforme necessário */
+                overflow: hidden;
+            }
+
+            .banner-slide {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+            }
+
+
+
+            /* Mostra o primeiro banner inicialmente */
+            .banner-slide:first-child {
+                opacity: 1;
+            }
+
+            /* Oculta o banner mobile por padrão */
+            .mobile {
+                display: none;
+            }
+
+            /* Quando a tela for menor que 768px (mobile), mostra o banner mobile e oculta o desktop */
+            @media screen and (max-width: 768px) {
+                .desktop {
+                    display: none;
+                }
+
+                .mobile {
+                    display: block;
+                }
+            }
+
+            /*---------------------------------------------*/
+
+            .menu-carousel {
+                width: 100%;
+                overflow: hidden;
+                margin-top: 10px;
+                padding: 10px 0;
+            }
+
+            .swiper-slide {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .swiper-slide img {
+                width: 115px;
+                height: 80px;
+                border-radius: 8px;
+            }
+
+            .swiper-slide p {
+                font-size: 0.9em;
+                text-align: center;
+                color: #000;
+                margin-top: 3px;
+            }
 
             .swiper-button-prev,
             .swiper-button-next {
-                display: none;
-            }
-        }
-
-        .banner-container {
-            position: relative;
-            width: 100%;
-            height: auto;
-            /* Ajuste a altura conforme necessário */
-            overflow: hidden;
-        }
-
-        .banner-slide {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-
-
-        /* Mostra o primeiro banner inicialmente */
-        .banner-slide:first-child {
-            opacity: 1;
-        }
-
-        /* Oculta o banner mobile por padrão */
-        .mobile {
-            display: none;
-        }
-
-        /* Quando a tela for menor que 768px (mobile), mostra o banner mobile e oculta o desktop */
-        @media screen and (max-width: 768px) {
-            .desktop {
-                display: none;
+                width: 10px;
+                /* Reduz o tamanho */
+                height: 10px;
+                font-size: 10px;
+                opacity: 0.3;
+                /* Deixa transparente */
+                color: rgba(255, 255, 255, 0.5);
+                /* Define cor transparente */
             }
 
-            .mobile {
-                display: block;
-            }
-        }
-
-        /*---------------------------------------------*/
-
-        .menu-carousel {
-            width: 100%;
-            overflow: hidden;
-            margin-top: 10px;
-            padding: 10px 0;
-        }
-
-        .swiper-slide {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .swiper-slide img {
-width: 115px;
-    height: 80px;
-    border-radius: 8px;
-        }
-
-        .swiper-slide p {
-            font-size: 0.9em;
-            text-align: center;
-            color: #000;
-            margin-top: 3px;
-        }
-
-        .swiper-button-prev,
-        .swiper-button-next {
-            width: 10px;
-            /* Reduz o tamanho */
-            height: 10px;
-            font-size: 10px;
-            opacity: 0.3;
-            /* Deixa transparente */
-            color: rgba(255, 255, 255, 0.5);
-            /* Define cor transparente */
-        }
-
-        .swiper-button-prev::after,
-        .swiper-button-next::after {
-            font-size: 20px;
-            /* Tamanho do ícone da seta */
-        }
-
-        .swiper-button-prev:hover,
-        .swiper-button-next:hover {
-            opacity: 0.7;
-            /* Aumenta a visibilidade ao passar o mouse */
-        }
-
-
-
-
-        /*-----------------------------------------------------*/
-
-        .container {
-            width: 100%;
-            margin: auto;
-        }
-
-        body>div>h1 {
-            text-align: center;
-        }
-
-        .container-cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: space-evenly;
-            margin: 10px 0 10px 0;
-        }
-
-
-        .card {
-            background-color: #000;
-            color: #fff;
-            padding: 10px;
-            border-radius: 8px;
-            cursor: pointer;
-            width: 150px;
-            text-align: left;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .card img {
-            width: 100%;
-            object-fit: cover;
-            border-radius: 8px 8px 0 0;
-            height: 150px;
-        }
-
-        .card .info {
-            padding: 5px;
-        }
-
-        .card .nome-produto {
-            font-size: 14px;
-            font-weight: bold;
-            margin-top: 5px;
-            height: 30px;
-        }
-
-        .card .preco {
-            font-size: 16px;
-            color: #fff;
-            margin-bottom: 0;
-        }
-
-        #quantidade {
-            font-size: 16px;
-            width: 35px;
-            height: 25px;
-            text-align: center;
-        }
-
-        h3 {
-            margin-bottom: 10px;
-            margin-top: 0;
-        }
-
-        #checkout>h3:nth-child(6) {
-            margin-top: 30px;
-        }
-
-        #sabores {
-            display: flex;
-            JUSTIFY-CONTENT: space-around;
-            gap: 10px;
-        }
-
-        #produtoSelecionado>button {
-            margin-top: 20px;
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hidden {
-            display: none !important;
-        }
-
-        .button {
-            background: #000;
-            color: white;
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 15px;
-            border: none;
-            cursor: pointer;
-        }
-
-        body>div.container>header>div>a {
-            display: none;
-        }
-
-        #checkout>label:nth-child(5) {
-            margin-left: 10PX;
-        }
-
-        #voltarHomeBtn {
-            background-color: #ccc;
-            color: #000;
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-            margin-top: 20PX;
-        }
-
-        #voltarCarrinhoBtn {
-            background-color: #ccc;
-            color: #000;
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-            margin-top: 20PX;
-        }
-
-        .itemCarrinho {
-            display: flex;
-            justify-content: space-evenly;
-            padding: 0 0 10px;
-            border-bottom: 1px solid #000;
-            margin-bottom: 10px;
-        }
-
-        .imagemProduto {
-            height: 80px;
-        }
-
-        .imagemProduto img {
-            width: 60px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 5px;
-            border: 1px solid #000;
-        }
-
-        .detalhesProduto {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: calc(100% - 100px);
-            /* Ajusta a largura do produto */
-            padding-left: 5px;
-            gap: 10px;
-        }
-
-        #produtoSelecionado {
-            margin: 10px;
-        }
-
-        #carrinho {
-            margin: 10px;
-        }
-
-        #checkout {
-            margin: 10px;
-        }
-
-        .produtoNomeEtrash {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 5px;
-            font-weight: 700;
-        }
-
-        .produtoNome {
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        .fa-trash:before {
-            background: none;
-            border: none;
-            color: red;
-            cursor: pointer;
-            FONT-SIZE: 1.2EM;
-        }
-
-        .produto-info>.produto-nome {
-            margin-bottom: 0;
-        }
-
-
-        .saboresProduto {
-            font-size: 14px;
-            color: #555;
-            display: grid;
-        }
-
-        .quantidadeEValor {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-            flex-direction: row-reverse;
-            align-items: center;
-        }
-
-        .seletorQuantidade {
-            align-items: center;
-            display: inline-flex;
-            align-items: center;
-            border-radius: 50px;
-            border: 1px solid #000;
-            padding: 5px;
-            padding-inline: 0;
-            margin-left: 5px;
-        }
-
-        #itensCarrinho span {
-            padding-inline: 6px;
-        }
-
-        #itensCarrinho {
-            color: #000;
-        }
-
-        .seletorQuantidade button {
-            padding: 5px;
-            margin: 0 5px;
-            font-weight: 700;
-            color: #fff;
-            border-radius: 50%;
-            background-color: #000;
-            font-size: 14px;
-            width: 18px;
-            height: 18px;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .quantidade {
-            font-size: 16px;
-            margin: 0 10px;
-        }
-
-        .quantidadeProduto {
-            padding: 5px;
-            padding-inline: 10px;
-            background-color: #4CAF50;
-            color: #ffffff;
-            font-weight: 700;
-            font-size: 12px;
-            border-radius: 25px;
-        }
-
-        .valorTotal {
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        #carrinho>p {
-            display: flex;
-            justify-content: end;
-        }
-
-
-        .sabor-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            /* Espaço entre o sabor e o seletor */
-        }
-
-        .sabor-nome {
-            font-size: 16px;
-            color: white;
-        }
-
-        .sabor-quantidade {
-            width: 50px;
-            /* Ajuste o tamanho do seletor conforme necessário */
-        }
-
-        #produtoSelecionado>div.quantidadeSabores {
-            margin-bottom: 10px;
-            font-size: 16px;
-            font-weight: 700;
-        }
-
-        #checkout>label:nth-child(4) {
-            margin-left: 20px;
-        }
-
-        #checkout>p {
-            margin-top: 2px;
-            font-style: italic;
-            font-size: 0.8rem;
-            margin-left: 10px;
-        }
-
-        #enderecoEntrega {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        #enderecoEntrega>span {
-            margin-top: 15px;
-            font-size: 14px;
-        }
-
-        #checkout>h2 {
-            margin-bottom: 40px;
-            margin-top: 0;
-        }
-
-        #enderecoEntrega>p {
-            margin-top: 0;
-            font-size: 14px;
-        }
-
-        #rua {
-            max-width: 100%;
-            border: 1.8px solid #000;
-            padding: 10px;
-            font-size: 1rem;
-            border-radius: 8px;
-            outline: none;
-            color: #000;
-        }
-
-        #numero {
-            max-width: 100%;
-            border: 1.8px solid #000;
-            padding: 10px;
-            font-size: 1rem;
-            border-radius: 8px;
-            outline: none;
-            color: #000;
-        }
-
-        #bairro {
-            max-width: 100%;
-            border: 1.8px solid #000;
-            padding: 10px;
-            font-size: 1rem;
-            border-radius: 8px;
-            outline: none;
-            color: #000;
-        }
-
-        .cart-icon {
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        .pix-container {
-            display: flex;
-            align-items: center;
-            padding: 0 10px 10px 10px;
-        }
-
-        .pix-icon {
-            margin-right: 5px;
-            font-size: 10px;
-        }
-
-        .copy-container {
-            text-align: center;
-            margin-left: 15px;
-            position: relative;
-            width: 60px;
-        }
-
-        .copy-icon {
-            font-size: 16px;
-            cursor: pointer;
-            margin-bottom: 5px;
-        }
-
-        .copy-text {
-            font-size: 10px;
-            color: #000;
-        }
-
-        .copy-text.copiado {
-            color: #000;
-            font-size: 10px;
-        }
-
-        .finalizar-btn {
-            background-color: #000;
-            color: #fff;
-            font-size: 16px;
-            width: 100%;
-            justify-content: center;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 40px;
-            display: flex;
-        }
-
-        .finalizar-btn:disabled {
-            background-color: #ccc;
-            color: #000;
-        }
-
-        .popout-confirmacao {
-            position: fixed;
-            top: 50%;
-            left: 25%;
-            transform: translate(-50%);
-            width: 50%;
-            text-align: center;
-            background: #2d2d2d;
-            color: white;
-            justify-content: center;
-            padding: 12px 16px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            font-size: 16px;
-            opacity: 0;
-            animation: popoutAnim 0.3s forwards;
-        }
-
-
-        @keyframes popoutAnim {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
+            .swiper-button-prev::after,
+            .swiper-button-next::after {
+                font-size: 20px;
+                /* Tamanho do ícone da seta */
             }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            .swiper-button-prev:hover,
+            .swiper-button-next:hover {
+                opacity: 0.7;
+                /* Aumenta a visibilidade ao passar o mouse */
             }
-        }
 
-        .produto {
-            position: relative;
-            display: inline-block;
-        }
 
-        .etiqueta {
-            position: absolute;
-            padding: 5px 10px;
-            font-weight: bold;
-            border-radius: 5px;
-            color: white;
-            background-color: red;
-            /* cor para a etiqueta */
-            z-index: 10;
-        }
 
-        .etiqueta-nov {
-            position: absolute;
-            padding: 5px 10px;
-            font-weight: bold;
-            border-radius: 5px;
-            color: white;
-            background-color: blue;
-            /* cor para a etiqueta */
-            z-index: 10;
-        }
 
-        #comprovantePix {
-            margin-bottom: 20px;
-            margin-top: 5px;
-        }
+            /*-----------------------------------------------------*/
 
+            .container {
+                width: 100%;
+                margin: auto;
+            }
 
-        .top-bar {
-            display: flex;
-            gap: 10px;
-            padding: 10px;
-            position: sticky;
-        }
+            body>div>h1 {
+                text-align: center;
+            }
 
-        .top-bar button {
-            padding: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            background: #000;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-        }
+            .container-cards {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: space-evenly;
+                margin: 10px 0 10px 0;
+            }
 
-        /* Popup */
-        .popup {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
 
-        .popup-content {
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-            max-height: 80%;
-            overflow-y: auto;
-            width: 350px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+            .card {
+                background-color: #000;
+                color: #fff;
+                padding: 10px;
+                border-radius: 8px;
+                cursor: pointer;
+                width: 150px;
+                text-align: left;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
 
-        .produto-card {
-            border: 1px solid #000;
-            background: #ccc;
-            display: inline-flex;
-            padding: 10px;
-            text-align: center;
-            align-items: center;
-            /* centraliza verticalmente */
-            border-radius: 5px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        }
+            .card img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 8px 8px 0 0;
+                height: 150px;
+            }
 
-        .produto-img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-        }
+            .card .info {
+                padding: 5px;
+            }
 
-        .fechar {
-            position: absolute;
-            top: 5px;
-            right: 10px;
-            font-size: 20px;
-            cursor: pointer;
-            font-size: 2rem;
-            color: #fff !important;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .produto-info {
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-            color: #000;
-            width: 100%;
-        }
-
-        .banner-container .swiper-wrapper .swiper-slide img {
-            width: 100%;
-            height: 100%;
-            border-radius: 0;
-        }
-
-        label input[type="radio"] {
-            transform: scale(1.4);
-            margin-right: 6px;
-            cursor: pointer;
-        }
-
-
-
-        .horario-popup {
-            max-width: 320px;
-            color: #000;
-        }
-
-        .horario-funcionamento {
-            font-family: Arial, sans-serif;
-            font-size: 15px;
-        }
-
-        .horario-funcionamento .titulo {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #000;
-            margin-bottom: 12px;
-        }
-
-        .horario-funcionamento .linha {
-            display: flex;
-            justify-content: space-between;
-            padding: 3px 0;
-        }
-
-        .horario-funcionamento .linha span:last-child {
-            font-weight: 500;
-        }
-
-        label[for="horarioRetirada"] {
-            font-size: 14px;
-            margin-top: 20px;
-            display: block;
-            margin-bottom: 6px;
-            font-family: Arial, sans-serif;
-        }
-
-        select#horarioRetirada {
-            width: 100%;
-            max-width: 400px;
-            padding: 10px 12px;
-            font-size: 15px;
-            border: 1.8px solid #000;
-            border-radius: 8px;
-            background-color: #fff;
-            color: #333;
-            cursor: pointer;
-            font-family: Arial, sans-serif;
-            transition: border-color 0.3s ease;
-            margin-bottom: 50px;
-        }
-
-        select#horarioRetirada:focus {
-            outline: none;
-            border-color: #000;
-            box-shadow: 0 0 5px rgba(1, 0, 0, 0.641);
-        }
-
-        select#horarioRetirada option {
-            font-size: 14px;
-            padding: 8px;
-        }
-
-        label[for="horarioRetirada"] i {
-            font-size: 14px;
-        }
-
-        #checkout>h3:nth-child(2)>i {
-            margin-right: 5px;
-            font-size: 16px;
-        }
-
-        #checkout>h3:nth-child(8) {
-            margin-top: 40px;
-        }
-
-        #btnCompartilhar>span {
-            font-size: 1em;
-        }
-
-        #dadosCliente {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 50px;
-        }
-
-        #dadosCliente>span>i {
-            margin-right: 5px;
-            font-size: 16px;
-            font-weight: 900;
-        }
-
-        #nomeCliente {
-            max-width: 100%;
-            border: 1.8px solid #000;
-            padding: 10px;
-            font-size: 1rem;
-            border-radius: 8px;
-            outline: none;
-            color: #000;
-        }
-
-        #telefoneCliente {
-            max-width: 100%;
-            border: 1.8px solid #000;
-            padding: 10px;
-            font-size: 1rem;
-            border-radius: 8px;
-            outline: none;
-            color: #000;
-        }
-
-        #carrinho>h2 {
-            margin-top: 0;
-        }
-
-        .btnAdicionarSabor {
-            padding: 5PX;
-            border-radius: 5px;
-            background: #ccc;
-            color: #000;
-            border: 1px solid #000;
-        }
-
-
-        #removerDoCarrinho {
-            box-shadow: none;
-            border: none;
-            outline: none;
-            color: RED;
-            padding: 0;
-            background: transparent;
-        }
-
-        #nomeCliente::placeholder {
-            color: #555;
-            /* cor do placeholder */
-        }
-
-        #telefoneCliente::placeholder {
-            color: #555;
-            /* cor do placeholder */
-        }
-
-        #rua::placeholder,
-        #numero::placeholder,
-        #bairro::placeholder {
-            color: #555;
-        }
-
-
-
-        .status-indicador {
-            position: absolute;
-            top: 80px;
-            left: 10px;
-            background: #ffffff;
-            color: white;
-            font-weight: bold;
-            padding: 6px 10px;
-            border-radius: 25px;
-            font-size: 1rem;
-            z-index: 100;
-            user-select: none;
-            /* Evita seleção do texto por acidente */
-        }
-
-        .footer {
-            background: #ffffff;
-            color: #000;
-            padding: 20px;
-            font-family: Arial, sans-serif;
-        }
-
-        .footer-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .footer-section {
-            flex: 1;
-            min-width: 220px;
-        }
-
-        .footer h4 {
-            margin-bottom: 8px;
-            color: #000;
-            margin-top: 10px;
-        }
-
-        .footer a {
-            color: #000;
-            text-decoration: none;
-            font-size: 1em;
-        }
-
-        .footer a:hover {
-            color: #000;
-        }
-
-        .social-links a {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .map-links a {
-            font-size: 1em;
-            align-items: center;
-            display: inline-flex;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 0.8em;
-            color: #000;
-        }
-
-        .social-links a,
-        .footer p {
-            display: flex;
-            align-items: center;
-            margin-bottom: 8px;
-            margin-top: 5px;
-
-        }
-
-        body>div.container>footer>div.footer-container>div:nth-child(3)>div {
-            display: inline-flex;
-            gap: 5px;
-            align-items: center;
-        }
-
-        body>div.container>footer>div.footer-container>div:nth-child(2)>p.map-links {
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .btn-compartilhar {
-            margin-left: 8px;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .texto-compartilhar {
-            font-size: 10px;
-            /* ajuste aqui */
-            margin-left: 4px;
-        }
-
-        body>div.container>footer>div.footer-container>div:nth-child(2)>p.endereco>a {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        body>div.container>footer>div.footer-container>div:nth-child(2)>p.endereco>a.btn-compartilhar>i {
-            text-align: center;
-        }
-
-        .especial {
-            color: #000;
-            margin-left: 6px;
-            font-size: 0.7em;
-            vertical-align: middle;
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .card .preco span {
-            font-size: 0.7em;
-        }
-
-        #cardapioPopup .produto-valor.especial {
-            font-size: 1em;
-        }
-
-        #cardapioPopup .produto-valor.especial>i {
-            font-size: 0.6em;
-            display: inline-flex;
-            margin-left: 5px;
-            gap: 5px;
-        }
-
-
-        table {
-    width: 100%;
-    color: #000;
-}
-
-        div.eapps-widget {
-            position: relative;
-            margin-left: auto !important;
-            margin-right: auto !important;
-        }
-
-        body>div.container>footer>div.footer-container>div:nth-child(4)>p.map-links>a.btn-compartilhar {
-            display: inline-flex;
-            align-items: center;
-        }
-
-        body>div.container>footer>div.footer-container>div:nth-child(4)>p.map-links {
-            justify-content: space-between;
-        }
-
-        /* HOME */
-        .header-container {
-            height: 60px;
-        }
-
-        /* CARRINHO */
-        .header-container.header-carrinho {
-            height: 60px;
-            /* ajuste o valor que quiser */
-        }
-
-        #voltarHomeBtnProduto {
-            background-color: #ccc;
-            color: #000;
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-            margin-top: 20PX;
-        }
-
-        .produtoSwiper {
-            width: 100%;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .produtoSwiper img {
-            width: 100%;
-            height: 170px;
-            object-fit: cover;
-        }
-
-
-
-
-
-
-
-        .lfCQiA {
-    margin-bottom: 18px!important;
-    margin-top: 35px!important;
-} 
-
-
-
-/* Container principal da chave PIX */
-#pixChave {
-    display: flex;               /* alinha ícone, texto e botão na horizontal */
-    align-items: center;         /* verticalmente centralizado */
-    gap: 10px;                   /* espaçamento entre os elementos */
-    padding: 10px 15px;          /* espaço interno */
-    margin: 10px auto;           /* centraliza horizontalmente na tela */
-    font-family: Arial, sans-serif;
-    font-size: 0.8em;
-    cursor: default;
-}
-
-/* Ícone do Pix */
-#pixChave .pix-icon {
-    width: 1.8em;
-    height: 1.8em;
-}
-
-/* Texto da chave */
-#pixChave #chavePix {
-    flex: 1;                     /* ocupa espaço restante */
-    overflow-x: auto;            /* se a chave for grande, permite rolagem horizontal */
-    white-space: nowrap;          /* não quebra linha */
-    text-overflow: ellipsis;     /* mostra "..." se não couber */
-}
-
-/* Container do botão copiar */
-#pixChave .copy-container {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    cursor: pointer;
-    user-select: none;
-}
-
-/* Ícone de copiar */
-#pixChave .copy-icon {
-    font-size: 18px;
-    color: #555;
-    transition: color 0.2s;
-}
-
-
-/* Texto do copiar */
-#pixChave .copy-text {
-    font-size: 10px;
-    color: #555;
-    transition: color 0.2s;
-}
-
-
-/* Responsivo para telas pequenas */
-@media (max-width: 400px) {
-    #pixChave {
-        font-size: 1em;
-        padding: 8px 12px;
-        max-width: 90%;
-    }
-
-    #pixChave .pix-icon {
-        width: 20px;
-        height: 20px;
-    }
-
-    #pixChave .copy-text {
-        font-size: 10px;
-    }
-}
-
-
-
-
-        /* Responsivo para mobile */
-        @media (max-width: 480px) {
-            select#horarioRetirada {
+            .card .nome-produto {
                 font-size: 14px;
-                padding: 8px 10px;
-                width: 80%;
+                font-weight: bold;
+                margin-top: 5px;
+                height: 30px;
+            }
+
+            .card .preco {
+                font-size: 16px;
+                color: #fff;
+                margin-bottom: 0;
+            }
+
+            #quantidade {
+                font-size: 16px;
+                width: 35px;
+                height: 25px;
+                text-align: center;
+            }
+
+            h3 {
+                margin-bottom: 10px;
+                margin-top: 0;
+            }
+
+            #checkout>h3:nth-child(6) {
+                margin-top: 30px;
+            }
+
+            #sabores {
+                display: flex;
+                JUSTIFY-CONTENT: space-around;
+                gap: 10px;
+            }
+
+            #produtoSelecionado>button {
+                margin-top: 20px;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hidden {
+                display: none !important;
+            }
+
+            .button {
+                background: #000;
+                color: white;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 15px;
+                border: none;
+                cursor: pointer;
+            }
+
+            body>div.container>header>div>a {
+                display: none;
+            }
+
+            #checkout>label:nth-child(5) {
+                margin-left: 10PX;
+            }
+
+            #voltarHomeBtn {
+                background-color: #ccc;
+                color: #000;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+                margin-top: 20PX;
+            }
+
+            #voltarCarrinhoBtn {
+                background-color: #ccc;
+                color: #000;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+                margin-top: 20PX;
+            }
+
+            .itemCarrinho {
+                display: flex;
+                justify-content: space-evenly;
+                padding: 0 0 10px;
+                border-bottom: 1px solid #000;
+                margin-bottom: 10px;
+            }
+
+            .imagemProduto {
+                height: 80px;
+            }
+
+            .imagemProduto img {
+                width: 60px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 5px;
+                border: 1px solid #000;
+            }
+
+            .detalhesProduto {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: calc(100% - 100px);
+                /* Ajusta a largura do produto */
+                padding-left: 5px;
+                gap: 10px;
+            }
+
+            #produtoSelecionado {
+                margin: 10px;
+            }
+
+            #carrinho {
+                margin: 10px;
+            }
+
+            #checkout {
+                margin: 10px;
+            }
+
+            .produtoNomeEtrash {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+                font-weight: 700;
+            }
+
+            .produtoNome {
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+            .fa-trash:before {
+                background: none;
+                border: none;
+                color: red;
+                cursor: pointer;
+                FONT-SIZE: 1.2EM;
+            }
+
+            .produto-info>.produto-nome {
+                margin-bottom: 0;
+            }
+
+
+            .saboresProduto {
+                font-size: 14px;
+                color: #555;
+                display: grid;
+            }
+
+            .quantidadeEValor {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+                flex-direction: row-reverse;
+                align-items: center;
+            }
+
+            .seletorQuantidade {
+                align-items: center;
+                display: inline-flex;
+                align-items: center;
+                border-radius: 50px;
+                border: 1px solid #000;
+                padding: 5px;
+                padding-inline: 0;
+                margin-left: 5px;
+            }
+
+            #itensCarrinho span {
+                padding-inline: 6px;
+            }
+
+            #itensCarrinho {
                 color: #000;
             }
-        }
 
-#btnCompartilhar {
-    display: none;
-}
+            .seletorQuantidade button {
+                padding: 5px;
+                margin: 0 5px;
+                font-weight: 700;
+                color: #fff;
+                border-radius: 50%;
+                background-color: #000;
+                font-size: 14px;
+                width: 18px;
+                height: 18px;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            .quantidade {
+                font-size: 16px;
+                margin: 0 10px;
+            }
+
+            .quantidadeProduto {
+                padding: 5px;
+                padding-inline: 10px;
+                background-color: #4CAF50;
+                color: #ffffff;
+                font-weight: 700;
+                font-size: 12px;
+                border-radius: 25px;
+            }
+
+            .valorTotal {
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            #carrinho>p {
+                display: flex;
+                justify-content: end;
+            }
 
 
-.whatsapp-flutuante {
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
+            .sabor-container {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                /* Espaço entre o sabor e o seletor */
+            }
 
-    width: 58px;
-    height: 58px;
+            .sabor-nome {
+                font-size: 16px;
+                color: white;
+            }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+            .sabor-quantidade {
+                width: 50px;
+                /* Ajuste o tamanho do seletor conforme necessário */
+            }
 
-    background: #ffffff;
-    border-radius: 50%;
+            #produtoSelecionado>div.quantidadeSabores {
+                margin-bottom: 10px;
+                font-size: 16px;
+                font-weight: 700;
+            }
 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            #checkout>label:nth-child(4) {
+                margin-left: 20px;
+            }
 
-    text-decoration: none;
+            #checkout>p {
+                margin-top: 2px;
+                font-style: italic;
+                font-size: 0.8rem;
+                margin-left: 10px;
+            }
 
-    z-index: 9999;
+            #enderecoEntrega {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
 
-    transition: transform 0.2s ease;
-}
+            #enderecoEntrega>span {
+                margin-top: 15px;
+                font-size: 14px;
+            }
 
-.whatsapp-flutuante i {
-    font-size: 40px;
-    color: #128337;
-}
+            #checkout>h2 {
+                margin-bottom: 40px;
+                margin-top: 0;
+            }
 
-.whatsapp-flutuante:hover {
-    transform: scale(1.1);
-}
+            #enderecoEntrega>p {
+                margin-top: 0;
+                font-size: 14px;
+            }
 
-@media (max-width: 768px) {
-    .whatsapp-flutuante {
-        left: 20px;
-        bottom: 15px;
-        width: 52px;
-        height: 52px;
-    }
+            #rua {
+                max-width: 100%;
+                border: 1.8px solid #000;
+                padding: 10px;
+                font-size: 1rem;
+                border-radius: 8px;
+                outline: none;
+                color: #000;
+            }
 
-    .whatsapp-flutuante i {
-        font-size: 35px;
-    }
-}
+            #numero {
+                max-width: 100%;
+                border: 1.8px solid #000;
+                padding: 10px;
+                font-size: 1rem;
+                border-radius: 8px;
+                outline: none;
+                color: #000;
+            }
 
-/* =========================
+            #bairro {
+                max-width: 100%;
+                border: 1.8px solid #000;
+                padding: 10px;
+                font-size: 1rem;
+                border-radius: 8px;
+                outline: none;
+                color: #000;
+            }
+
+            .cart-icon {
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            .pix-container {
+                display: flex;
+                align-items: center;
+                padding: 0 10px 10px 10px;
+            }
+
+            .pix-icon {
+                margin-right: 5px;
+                font-size: 10px;
+            }
+
+            .copy-container {
+                text-align: center;
+                margin-left: 15px;
+                position: relative;
+                width: 60px;
+            }
+
+            .copy-icon {
+                font-size: 16px;
+                cursor: pointer;
+                margin-bottom: 5px;
+            }
+
+            .copy-text {
+                font-size: 10px;
+                color: #000;
+            }
+
+            .copy-text.copiado {
+                color: #000;
+                font-size: 10px;
+            }
+
+            .finalizar-btn {
+                background-color: #000;
+                color: #fff;
+                font-size: 16px;
+                width: 100%;
+                justify-content: center;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 40px;
+                display: flex;
+            }
+
+            .finalizar-btn:disabled {
+                background-color: #ccc;
+                color: #000;
+            }
+
+            .popout-confirmacao {
+                position: fixed;
+                top: 50%;
+                left: 25%;
+                transform: translate(-50%);
+                width: 50%;
+                text-align: center;
+                background: #2d2d2d;
+                color: white;
+                justify-content: center;
+                padding: 12px 16px;
+                border-radius: 8px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+                font-size: 16px;
+                opacity: 0;
+                animation: popoutAnim 0.3s forwards;
+            }
+
+
+            @keyframes popoutAnim {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .produto {
+                position: relative;
+                display: inline-block;
+            }
+
+            .etiqueta {
+                position: absolute;
+                padding: 5px 10px;
+                font-weight: bold;
+                border-radius: 5px;
+                color: white;
+                background-color: red;
+                /* cor para a etiqueta */
+                z-index: 10;
+            }
+
+            .etiqueta-nov {
+                position: absolute;
+                padding: 5px 10px;
+                font-weight: bold;
+                border-radius: 5px;
+                color: white;
+                background-color: blue;
+                /* cor para a etiqueta */
+                z-index: 10;
+            }
+
+            #comprovantePix {
+                margin-bottom: 20px;
+                margin-top: 5px;
+            }
+
+
+            .top-bar {
+                display: flex;
+                gap: 10px;
+                padding: 10px;
+                position: sticky;
+            }
+
+            .top-bar button {
+                padding: 5px;
+                cursor: pointer;
+                font-weight: bold;
+                background: #000;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+            }
+
+            /* Popup */
+            .popup {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+            }
+
+            .popup-content {
+                background: white;
+                padding: 20px;
+                border-radius: 5px;
+                text-align: center;
+                max-height: 80%;
+                overflow-y: auto;
+                width: 350px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .produto-card {
+                border: 1px solid #000;
+                background: #ccc;
+                display: inline-flex;
+                padding: 10px;
+                text-align: center;
+                align-items: center;
+                /* centraliza verticalmente */
+                border-radius: 5px;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .produto-img {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+            }
+
+            .fechar {
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                font-size: 20px;
+                cursor: pointer;
+                font-size: 2rem;
+                color: #fff !important;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            .produto-info {
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                color: #000;
+                width: 100%;
+            }
+
+            .banner-container .swiper-wrapper .swiper-slide img {
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+
+            label input[type="radio"] {
+                transform: scale(1.4);
+                margin-right: 6px;
+                cursor: pointer;
+            }
+
+
+
+            .horario-popup {
+                max-width: 320px;
+                color: #000;
+            }
+
+            .horario-funcionamento {
+                font-family: Arial, sans-serif;
+                font-size: 15px;
+            }
+
+            .horario-funcionamento .titulo {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                color: #000;
+                margin-bottom: 12px;
+            }
+
+            .horario-funcionamento .linha {
+                display: flex;
+                justify-content: space-between;
+                padding: 3px 0;
+            }
+
+            .horario-funcionamento .linha span:last-child {
+                font-weight: 500;
+            }
+
+            label[for="horarioRetirada"] {
+                font-size: 14px;
+                margin-top: 20px;
+                display: block;
+                margin-bottom: 6px;
+                font-family: Arial, sans-serif;
+            }
+
+            select#horarioRetirada {
+                width: 100%;
+                max-width: 400px;
+                padding: 10px 12px;
+                font-size: 15px;
+                border: 1.8px solid #000;
+                border-radius: 8px;
+                background-color: #fff;
+                color: #333;
+                cursor: pointer;
+                font-family: Arial, sans-serif;
+                transition: border-color 0.3s ease;
+                margin-bottom: 50px;
+            }
+
+            select#horarioRetirada:focus {
+                outline: none;
+                border-color: #000;
+                box-shadow: 0 0 5px rgba(1, 0, 0, 0.641);
+            }
+
+            select#horarioRetirada option {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            label[for="horarioRetirada"] i {
+                font-size: 14px;
+            }
+
+            #checkout>h3:nth-child(2)>i {
+                margin-right: 5px;
+                font-size: 16px;
+            }
+
+            #checkout>h3:nth-child(8) {
+                margin-top: 40px;
+            }
+
+            #btnCompartilhar>span {
+                font-size: 1em;
+            }
+
+            #dadosCliente {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-bottom: 50px;
+            }
+
+            #dadosCliente>span>i {
+                margin-right: 5px;
+                font-size: 16px;
+                font-weight: 900;
+            }
+
+            #nomeCliente {
+                max-width: 100%;
+                border: 1.8px solid #000;
+                padding: 10px;
+                font-size: 1rem;
+                border-radius: 8px;
+                outline: none;
+                color: #000;
+            }
+
+            #telefoneCliente {
+                max-width: 100%;
+                border: 1.8px solid #000;
+                padding: 10px;
+                font-size: 1rem;
+                border-radius: 8px;
+                outline: none;
+                color: #000;
+            }
+
+            #carrinho>h2 {
+                margin-top: 0;
+            }
+
+            .btnAdicionarSabor {
+                padding: 5PX;
+                border-radius: 5px;
+                background: #ccc;
+                color: #000;
+                border: 1px solid #000;
+            }
+
+
+            #removerDoCarrinho {
+                box-shadow: none;
+                border: none;
+                outline: none;
+                color: RED;
+                padding: 0;
+                background: transparent;
+            }
+
+            #nomeCliente::placeholder {
+                color: #555;
+                /* cor do placeholder */
+            }
+
+            #telefoneCliente::placeholder {
+                color: #555;
+                /* cor do placeholder */
+            }
+
+            #rua::placeholder,
+            #numero::placeholder,
+            #bairro::placeholder {
+                color: #555;
+            }
+
+
+
+            .status-indicador {
+                position: absolute;
+                top: 80px;
+                left: 10px;
+                background: #ffffff;
+                color: white;
+                font-weight: bold;
+                padding: 6px 10px;
+                border-radius: 25px;
+                font-size: 1rem;
+                z-index: 100;
+                user-select: none;
+                /* Evita seleção do texto por acidente */
+            }
+
+            .footer {
+                background: #ffffff;
+                color: #000;
+                padding: 20px;
+                font-family: Arial, sans-serif;
+                width: 100%;
+            }
+
+            .footer-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: space-between;
+                max-width: 1200px;
+                margin: auto;
+            }
+
+            .footer-section {
+                flex: 1;
+                min-width: 220px;
+            }
+
+            .footer h4 {
+                margin-bottom: 8px;
+                color: #000;
+                margin-top: 10px;
+            }
+
+            .footer a {
+                color: #000;
+                text-decoration: none;
+                font-size: 1em;
+            }
+
+            .footer a:hover {
+                color: #000;
+            }
+
+            .social-links a {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .map-links a {
+                font-size: 1em;
+                align-items: center;
+                display: inline-flex;
+            }
+
+            .footer-bottom {
+                text-align: center;
+                margin-top: 30px;
+                font-size: 0.8em;
+                color: #000;
+            }
+
+            .social-links a,
+            .footer p {
+                display: flex;
+                align-items: center;
+                margin-bottom: 8px;
+                margin-top: 5px;
+
+            }
+
+            body>div.container>footer>div.footer-container>div:nth-child(3)>div {
+                display: inline-flex;
+                gap: 5px;
+                align-items: center;
+            }
+
+            body>div.container>footer>div.footer-container>div:nth-child(2)>p.map-links {
+                gap: 15px;
+                margin-top: 15px;
+            }
+
+            .btn-compartilhar {
+                margin-left: 8px;
+                text-decoration: none;
+                color: inherit;
+            }
+
+            .texto-compartilhar {
+                font-size: 10px;
+                /* ajuste aqui */
+                margin-left: 4px;
+            }
+
+            body>div.container>footer>div.footer-container>div:nth-child(2)>p.endereco>a {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            body>div.container>footer>div.footer-container>div:nth-child(2)>p.endereco>a.btn-compartilhar>i {
+                text-align: center;
+            }
+
+            .especial {
+                color: #000;
+                margin-left: 6px;
+                font-size: 0.7em;
+                vertical-align: middle;
+                display: inline-flex;
+                align-items: center;
+                gap: 4px;
+            }
+
+            .card .preco span {
+                font-size: 0.7em;
+            }
+
+            #cardapioPopup .produto-valor.especial {
+                font-size: 1em;
+            }
+
+            #cardapioPopup .produto-valor.especial>i {
+                font-size: 0.6em;
+                display: inline-flex;
+                margin-left: 5px;
+                gap: 5px;
+            }
+
+
+            table {
+                width: 100%;
+                color: #000;
+            }
+
+            div.eapps-widget {
+                position: relative;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            body>div.container>footer>div.footer-container>div:nth-child(4)>p.map-links>a.btn-compartilhar {
+                display: inline-flex;
+                align-items: center;
+            }
+
+            body>div.container>footer>div.footer-container>div:nth-child(4)>p.map-links {
+                justify-content: space-between;
+            }
+
+            /* HOME */
+            .header-container {
+                height: 60px;
+            }
+
+            /* CARRINHO */
+            .header-container.header-carrinho {
+                height: 60px;
+                /* ajuste o valor que quiser */
+            }
+
+            #voltarHomeBtnProduto {
+                background-color: #ccc;
+                color: #000;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+                margin-top: 20PX;
+            }
+
+            .produtoSwiper {
+                width: 100%;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            .produtoSwiper img {
+                width: 100%;
+                height: 170px;
+                object-fit: cover;
+            }
+
+
+
+
+
+
+
+            .lfCQiA {
+                margin-bottom: 18px !important;
+                margin-top: 35px !important;
+            }
+
+
+
+            /* Container principal da chave PIX */
+            #pixChave {
+                display: flex;
+                /* alinha ícone, texto e botão na horizontal */
+                align-items: center;
+                /* verticalmente centralizado */
+                gap: 10px;
+                /* espaçamento entre os elementos */
+                padding: 10px 15px;
+                /* espaço interno */
+                margin: 10px auto;
+                /* centraliza horizontalmente na tela */
+                font-family: Arial, sans-serif;
+                font-size: 0.8em;
+                cursor: default;
+            }
+
+            /* Ícone do Pix */
+            #pixChave .pix-icon {
+                width: 1.8em;
+                height: 1.8em;
+            }
+
+            /* Texto da chave */
+            #pixChave #chavePix {
+                flex: 1;
+                /* ocupa espaço restante */
+                overflow-x: auto;
+                /* se a chave for grande, permite rolagem horizontal */
+                white-space: nowrap;
+                /* não quebra linha */
+                text-overflow: ellipsis;
+                /* mostra "..." se não couber */
+            }
+
+            /* Container do botão copiar */
+            #pixChave .copy-container {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                cursor: pointer;
+                user-select: none;
+            }
+
+            /* Ícone de copiar */
+            #pixChave .copy-icon {
+                font-size: 18px;
+                color: #555;
+                transition: color 0.2s;
+            }
+
+
+            /* Texto do copiar */
+            #pixChave .copy-text {
+                font-size: 10px;
+                color: #555;
+                transition: color 0.2s;
+            }
+
+
+            /* Responsivo para telas pequenas */
+            @media (max-width: 400px) {
+                #pixChave {
+                    font-size: 1em;
+                    padding: 8px 12px;
+                    max-width: 90%;
+                }
+
+                #pixChave .pix-icon {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                #pixChave .copy-text {
+                    font-size: 10px;
+                }
+            }
+
+
+
+
+            /* Responsivo para mobile */
+            @media (max-width: 480px) {
+                select#horarioRetirada {
+                    font-size: 14px;
+                    padding: 8px 10px;
+                    width: 80%;
+                    color: #000;
+                }
+            }
+
+            #btnCompartilhar {
+                display: none;
+            }
+
+
+            .whatsapp-flutuante {
+                position: fixed;
+                left: 20px;
+                bottom: 20px;
+
+                width: 58px;
+                height: 58px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background: #ffffff;
+                border-radius: 50%;
+
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+                text-decoration: none;
+
+                z-index: 9999;
+
+                transition: transform 0.2s ease;
+            }
+
+            .whatsapp-flutuante i {
+                font-size: 40px;
+                color: #128337;
+            }
+
+            .whatsapp-flutuante:hover {
+                transform: scale(1.1);
+            }
+
+            @media (max-width: 768px) {
+                .whatsapp-flutuante {
+                    left: 20px;
+                    bottom: 15px;
+                    width: 52px;
+                    height: 52px;
+                }
+
+                .whatsapp-flutuante i {
+                    font-size: 35px;
+                }
+            }
+
+            /* =========================
 MENU BANDAS
 ========================= */
 
-.top-bar{
-    display:inline-flex;
-    gap:10px;
-    align-items:center;
-}
+            .top-bar {
+                display: inline-flex;
+                gap: 10px;
+                align-items: center;
+            }
 
-#selectBandas{
-    background:#000;
-    color:#fff;
-    font-weight: bold;
-    padding: 4.5px 5px;
-    border-radius:5px;
-    cursor:pointer;
-    outline:none;
-    width: 100%;
-    border: none;
-}
+            #selectBandas {
+                background: #000;
+                color: #fff;
+                font-weight: bold;
+                padding: 4.5px 5px;
+                border-radius: 5px;
+                cursor: pointer;
+                outline: none;
+                width: 100%;
+                border: none;
+            }
 
-#selectBandas option{
-    background:#111;
-    color:#fff;
-}
-
-
-#infoFreteGratis{
-    padding:12px;
-    border-radius:8px;
-    text-align:center;
-    font-weight:bold;
-    margin:10px 0;
-    transition:.3s;
-}
-
-.barra-topo {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    height: 36px;
-    display: flex;
-    align-items: center;
-}
-
-.barra-topo-conteudo {
-    display: flex;
-    align-items: center;
-    width: max-content;
-    animation: noticias 20s linear infinite;
-}
-
-.barra-topo-conteudo span {
-    flex-shrink: 0;
-    margin: 0 15px; /* Espaçamento fixo */
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: .5px;
-}
-
-@keyframes noticias {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
-}
+            #selectBandas option {
+                background: #111;
+                color: #fff;
+            }
 
 
+            #infoFreteGratis {
+                padding: 12px;
+                border-radius: 8px;
+                text-align: center;
+                font-weight: bold;
+                margin: 10px 0;
+                transition: .3s;
+            }
 
-/* Botão Voltar ao Topo */
-#btnVoltarTopo {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 48px;
-    height: 48px;
-    background-color: #128337;
-    color: #ffffff;
-    border: none;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    transition: background-color 0.3s, transform 0.3s;
-}
+            .barra-topo {
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+                height: 36px;
+                display: flex;
+                align-items: center;
+            }
 
-#btnVoltarTopo:hover {
-    background-color: #0d6429;
-    transform: translateY(-4px);
-}
+            .barra-topo-conteudo {
+                display: flex;
+                align-items: center;
+                width: max-content;
+                animation: noticias 20s linear infinite;
+            }
 
-#btnVoltarTopo.visivel {
-    display: flex;
-}
+            .barra-topo-conteudo span {
+                flex-shrink: 0;
+                margin: 0 15px;
+                /* Espaçamento fixo */
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: .5px;
+            }
 
-@media (max-width: 768px) {
-    #btnVoltarTopo {
-        right: 15px;
-        bottom: 15px;
-        width: 44px;
-        height: 44px;
-    }
-}
+            @keyframes noticias {
+                from {
+                    transform: translateX(0);
+                }
+
+                to {
+                    transform: translateX(-50%);
+                }
+            }
 
 
 
-    </style>
-</head>
+            /* Botão Voltar ao Topo */
+            #btnVoltarTopo {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 48px;
+                height: 48px;
+                background-color: #128337;
+                color: #ffffff;
+                border: none;
+                border-radius: 50%;
+                font-size: 20px;
+                cursor: pointer;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                z-index: 9999;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+                transition: background-color 0.3s, transform 0.3s;
+            }
+
+            #btnVoltarTopo:hover {
+                background-color: #0d6429;
+                transform: translateY(-4px);
+            }
+
+            #btnVoltarTopo.visivel {
+                display: flex;
+            }
+
+            @media (max-width: 768px) {
+                #btnVoltarTopo {
+                    right: 15px;
+                    bottom: 15px;
+                    width: 44px;
+                    height: 44px;
+                }
+            }
+
+
+            /* Distribuição do rodapé no desktop */
+            @media (min-width: 769px) {
+                .footer-container {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    gap: 30px;
+                    max-width: 1200px;
+                    width: 100%;
+                    margin: 0 auto;
+                }
+
+                .footer-section {
+                    flex: 1;
+                    min-width: 0;
+                }
+            }
+        </style>
+    </head>
 
 <body>
 
 
 
     <div class="container">
-            <a href="https://wa.me/5535997378247"
-   class="whatsapp-flutuante"
-   target="_blank"
-   aria-label="Falar pelo WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-</a>
-<div class="barra-topo">
-    <div class="barra-topo-conteudo">
-        <span>Entrega grátis acima de R$ 120,00</span>
-<span class="separador">•</span>
-        <span>Camisetas 100% Algodão</span>
-<span class="separador">•</span>
-        <span>Envio em até 1h</span>
-<span class="separador">•</span>
-        <span>Parcelamos no cartão</span>
-<span class="separador">•</span>
+        <a href="https://wa.me/5535997378247" class="whatsapp-flutuante" target="_blank"
+            aria-label="Falar pelo WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <div class="barra-topo">
+            <div class="barra-topo-conteudo">
+                <span>Entrega grátis acima de R$ 120,00</span>
+                <span class="separador">•</span>
+                <span>Camisetas 100% Algodão</span>
+                <span class="separador">•</span>
+                <span>Envio em até 1h</span>
+                <span class="separador">•</span>
+                <span>Parcelamos no cartão</span>
+                <span class="separador">•</span>
 
-        <!-- Cópia para o loop infinito -->
-        <span>Entrega grátis acima de R$ 120,00</span>
-<span class="separador">•</span>
-        <span>Camisetas 100% Algodão</span>
-<span class="separador">•</span>
-        <span>Envio em até 1h</span>
-<span class="separador">•</span>
-        <span>Parcelamos no cartão</span>
-<span class="separador">•</span>
-    </div>
-</div>
+                <!-- Cópia para o loop infinito -->
+                <span>Entrega grátis acima de R$ 120,00</span>
+                <span class="separador">•</span>
+                <span>Camisetas 100% Algodão</span>
+                <span class="separador">•</span>
+                <span>Envio em até 1h</span>
+                <span class="separador">•</span>
+                <span>Parcelamos no cartão</span>
+                <span class="separador">•</span>
+            </div>
+        </div>
         <header>
             <div class="header-container">
                 <a href="#" class="home-icon" onclick="voltarHome()">
@@ -1465,105 +1492,104 @@ MENU BANDAS
 
                         <span id="fecharCardapio" class="fechar">&times;</span>
 
-                        
+
                         <!-- Adicione mais produtos aqui -->
                         <div class="tabela-responsiva" style="padding:20px; overflow-x:auto; text-align:center;">
 
-    <img 
-        src="https://cdn.awsli.com.br/2297/2297081/arquivos/Screenshot_20230601-151922-913.png"
-        alt="Descrição da imagem"
-        style="width:100%; max-width:300px; display:block; margin:0 auto 20px;"
-    >
+                            <img src="https://cdn.awsli.com.br/2297/2297081/arquivos/Screenshot_20230601-151922-913.png"
+                                alt="Descrição da imagem"
+                                style="width:100%; max-width:300px; display:block; margin:0 auto 20px;">
 
-    <!-- TABELA CAMISETAS -->
+                            <!-- TABELA CAMISETAS -->
 
-    <table style="margin:20px auto; border-collapse:collapse; width:100%; max-width:600px;">
+                            <table style="margin:20px auto; border-collapse:collapse; width:100%; max-width:600px;">
 
-        <caption style="font-size:18px; font-weight:bold; margin-bottom:10px;">
-            Medidas Camisetas
-        </caption>
+                                <caption style="font-size:18px; font-weight:bold; margin-bottom:10px;">
+                                    Medidas Camisetas
+                                </caption>
 
-        <tbody>
+                                <tbody>
 
-            <tr>
-                <th style="padding:8px; border:1px solid #ccc; background:#000;color: #fff;"></th>
+                                    <tr>
+                                        <th style="padding:8px; border:1px solid #ccc; background:#000;color: #fff;">
+                                        </th>
 
-                <th style="padding:8px; border:1px solid #ccc; background:#000;color: #fff;">
-                    Tamanhos
-                </th>
+                                        <th style="padding:8px; border:1px solid #ccc; background:#000;color: #fff;">
+                                            Tamanhos
+                                        </th>
 
-                <th style="padding:8px; border:1px solid #ccc; background:#000;color: #fff;">
-                    P
-                </th>
+                                        <th style="padding:8px; border:1px solid #ccc; background:#000;color: #fff;">
+                                            P
+                                        </th>
 
-                <th style="padding:8px; border:1px solid #ccc; background:#000;color: #fff;">
-                    M
-                </th>
+                                        <th style="padding:8px; border:1px solid #ccc; background:#000;color: #fff;">
+                                            M
+                                        </th>
 
-                <th style="padding:8px; border:1px solid #ccc; background:#000;color: #fff;">
-                    G
-                </th>
+                                        <th style="padding:8px; border:1px solid #ccc; background:#000;color: #fff;">
+                                            G
+                                        </th>
 
-                <th style="padding:8px; border:1px solid #ccc; background:#000;color: #fff;">
-                    GG
-                </th>
-            </tr>
+                                        <th style="padding:8px; border:1px solid #ccc; background:#000;color: #fff;">
+                                            GG
+                                        </th>
+                                    </tr>
 
-            <tr>
-                <td style="padding:8px; border:1px solid #ccc;">A</td>
+                                    <tr>
+                                        <td style="padding:8px; border:1px solid #ccc;">A</td>
 
-                <td style="padding:8px; border:1px solid #ccc; word-break:break-word;">
-                    Comprimento
-                </td>
+                                        <td style="padding:8px; border:1px solid #ccc; word-break:break-word;">
+                                            Comprimento
+                                        </td>
 
-                <td style="padding:8px; border:1px solid #ccc;">70</td>
-                <td style="padding:8px; border:1px solid #ccc;">72</td>
-                <td style="padding:8px; border:1px solid #ccc;">74</td>
-                <td style="padding:8px; border:1px solid #ccc;">76</td>
-            </tr>
+                                        <td style="padding:8px; border:1px solid #ccc;">70</td>
+                                        <td style="padding:8px; border:1px solid #ccc;">72</td>
+                                        <td style="padding:8px; border:1px solid #ccc;">74</td>
+                                        <td style="padding:8px; border:1px solid #ccc;">76</td>
+                                    </tr>
 
-            <tr>
-                <td style="padding:8px; border:1px solid #ccc;">B</td>
+                                    <tr>
+                                        <td style="padding:8px; border:1px solid #ccc;">B</td>
 
-                <td style="padding:8px; border:1px solid #ccc; word-break:break-word;">
-                    Manga
-                </td>
+                                        <td style="padding:8px; border:1px solid #ccc; word-break:break-word;">
+                                            Manga
+                                        </td>
 
-                <td style="padding:8px; border:1px solid #ccc;">20</td>
-                <td style="padding:8px; border:1px solid #ccc;">21</td>
-                <td style="padding:8px; border:1px solid #ccc;">22</td>
-                <td style="padding:8px; border:1px solid #ccc;">23</td>
-            </tr>
+                                        <td style="padding:8px; border:1px solid #ccc;">20</td>
+                                        <td style="padding:8px; border:1px solid #ccc;">21</td>
+                                        <td style="padding:8px; border:1px solid #ccc;">22</td>
+                                        <td style="padding:8px; border:1px solid #ccc;">23</td>
+                                    </tr>
 
-            <tr>
-                <td style="padding:8px; border:1px solid #ccc;">C</td>
+                                    <tr>
+                                        <td style="padding:8px; border:1px solid #ccc;">C</td>
 
-                <td style="padding:8px; border:1px solid #ccc; word-break:break-word;">
-                    Torax
-                </td>
+                                        <td style="padding:8px; border:1px solid #ccc; word-break:break-word;">
+                                            Torax
+                                        </td>
 
-                <td style="padding:8px; border:1px solid #ccc;">52</td>
-                <td style="padding:8px; border:1px solid #ccc;">54</td>
-                <td style="padding:8px; border:1px solid #ccc;">56</td>
-                <td style="padding:8px; border:1px solid #ccc;">58</td>
-            </tr>
+                                        <td style="padding:8px; border:1px solid #ccc;">52</td>
+                                        <td style="padding:8px; border:1px solid #ccc;">54</td>
+                                        <td style="padding:8px; border:1px solid #ccc;">56</td>
+                                        <td style="padding:8px; border:1px solid #ccc;">58</td>
+                                    </tr>
 
-        </tbody>
-    </table>
-
+                                </tbody>
+                            </table>
 
 
-    <p style="text-align:center; font-size:12px; margin-top:15px;">
-        OBS: Pode haver variação de +/- 1 centímetro
-    </p>
 
-</div>
+                            <p style="text-align:center; font-size:12px; margin-top:15px;">
+                                OBS: Pode haver variação de +/- 1 centímetro
+                            </p>
+
+                        </div>
 
 
                     </div>
                 </div>
 
-                
+
 
                 <!-- POPUP HORÁRIO DE FUNCIONAMENTO -->
                 <div id="horarioPopup" class="popup hidden">
@@ -1615,41 +1641,41 @@ MENU BANDAS
                     <div id="statusAbertoFechado" class="status-indicador">...</div>
                 </div>
 
-                
-
-                
 
 
 
-<div class="top-bar">
-    <select id="selectBandas" onchange="filtrarProdutos()">
 
-<option value="todos">Bandas</option>
-<option value="iron maiden">Iron Maiden</option>
-<option value="metallica">Metallica</option>
-<option value="guns in roses">Guns</option>
-<option value="ac/dc">AC/DC</option>
-<option value="anthrax">Anthrax</option>
-<option value="the doors">The doors</option>
-<option value="linkin Park">Linkin Park</option>
-<option value="led zeppelin">Led zeppelin</option>
-<option value="megadeth">Megadeth</option>
-<option value="slayer">Slayer</option>
-<option value="judas priest">Judas Priest</option>
-<option value="charlie brown jr">Charlie B. Jr</option>
-<option value="black sabbath">Black Sabbath</option>
-<option value="slipknot">Slipknot</option>
-<option value="system of a down">System of a down</option>
-<option value="green day">Green Day</option>
-<option value="korn">Korn</option>
-<option value="nirvana">Nirvana</option>
-<option value="sex pistols">Sex Pistols</option>
-<option value="red hot chili peppers">R.H.C.P</option>
-<option value="motorhead">Motorhead</option>
-<option value="pantera">Pantera</option>
-<option value="ramones">Ramones</option>
 
-    </select>
+
+                <div class="top-bar">
+                    <select id="selectBandas" onchange="filtrarProdutos()">
+
+                        <option value="todos">Bandas</option>
+                        <option value="iron maiden">Iron Maiden</option>
+                        <option value="metallica">Metallica</option>
+                        <option value="guns in roses">Guns</option>
+                        <option value="ac/dc">AC/DC</option>
+                        <option value="anthrax">Anthrax</option>
+                        <option value="the doors">The doors</option>
+                        <option value="linkin Park">Linkin Park</option>
+                        <option value="led zeppelin">Led zeppelin</option>
+                        <option value="megadeth">Megadeth</option>
+                        <option value="slayer">Slayer</option>
+                        <option value="judas priest">Judas Priest</option>
+                        <option value="charlie brown jr">Charlie B. Jr</option>
+                        <option value="black sabbath">Black Sabbath</option>
+                        <option value="slipknot">Slipknot</option>
+                        <option value="system of a down">System of a down</option>
+                        <option value="green day">Green Day</option>
+                        <option value="korn">Korn</option>
+                        <option value="nirvana">Nirvana</option>
+                        <option value="sex pistols">Sex Pistols</option>
+                        <option value="red hot chili peppers">R.H.C.P</option>
+                        <option value="motorhead">Motorhead</option>
+                        <option value="pantera">Pantera</option>
+                        <option value="ramones">Ramones</option>
+
+                    </select>
                     <button id="btnHorario" onclick="abrirHorario()">Horários</button>
                     <button id="abrirCardapioBtn">Medidas</button>
                 </div>
@@ -1702,164 +1728,187 @@ MENU BANDAS
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('metallica')">
-        <img src="https://github.com/paginasvendas/gestaodedespesaspessoal/blob/main/IMAGENS/metallica.jpg?raw=true">
-        <p>Metallica</p>
-    </a>
-</div>
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('metallica')">
+                        <img
+                            src="https://github.com/paginasvendas/gestaodedespesaspessoal/blob/main/IMAGENS/metallica.jpg?raw=true">
+                        <p>Metallica</p>
+                    </a>
+                </div>
                 <div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('iron maiden')">
-        <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/54294_iron_maiden.jpg?raw=true">
-        <p>Iron Maiden</p>
-    </a>
-</div>
-
-                <div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('ac/dc')">
-        <img src="https://github.com/paginasvendas/gestaodedespesaspessoal/blob/main/IMAGENS/50720_ac_dc.jpg?raw=true">
-        <p>AC/DC</p>
-    </a>
-</div>
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('iron maiden')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/54294_iron_maiden.jpg?raw=true">
+                        <p>Iron Maiden</p>
+                    </a>
+                </div>
 
                 <div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('ramones')">
-        <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/RAMONES1.jpg?raw=true">
-        <p>Ramones</p>
-    </a>
-</div>
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('ac/dc')">
+                        <img
+                            src="https://github.com/paginasvendas/gestaodedespesaspessoal/blob/main/IMAGENS/50720_ac_dc.jpg?raw=true">
+                        <p>AC/DC</p>
+                    </a>
+                </div>
 
-                                    <div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('guns in roses')">
-        <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/Guns-N-Roses-Emblema.jpg?raw=true">
-        <p>Guns In Roses</p>
-    </a>
-</div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('ramones')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/RAMONES1.jpg?raw=true">
+                        <p>Ramones</p>
+                    </a>
+                </div>
 
-<div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('anthrax')">
-        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/antrax.jpeg?raw=true  ">
-        <p>Anthrax</p>
-    </a>
-</div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('guns in roses')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/Guns-N-Roses-Emblema.jpg?raw=true">
+                        <p>Guns In Roses</p>
+                    </a>
+                </div>
 
-<div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('the doors')">
-        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/the%20door1.jpeg?raw=true">
-        <p>The Doors</p>
-    </a>
-</div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('anthrax')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/antrax.jpeg?raw=true  ">
+                        <p>Anthrax</p>
+                    </a>
+                </div>
 
-<div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('linkin Park')">
-        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/linkpark11515.jpeg?raw=true">
-        <p>Linkin Park</p>
-    </a>
-</div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('the doors')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/the%20door1.jpeg?raw=true">
+                        <p>The Doors</p>
+                    </a>
+                </div>
 
-<div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('led zeppelin')">
-        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/ledd11111.jpeg?raw=true">
-        <p>Led Zeppelin</p>
-    </a>
-</div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('linkin Park')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/linkpark11515.jpeg?raw=true">
+                        <p>Linkin Park</p>
+                    </a>
+                </div>
 
-<div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('megadeth')">
-        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/megadeth1.jpeg?raw=true">
-        <p>Megadeth</p>
-    </a>
-</div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('led zeppelin')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/ledd11111.jpeg?raw=true">
+                        <p>Led Zeppelin</p>
+                    </a>
+                </div>
 
-<div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('slayer')">
-        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/slayer1.jpeg?raw=true">
-        <p>Slayer</p>
-    </a>
-</div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('megadeth')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/megadeth1.jpeg?raw=true">
+                        <p>Megadeth</p>
+                    </a>
+                </div>
 
-<div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('judas priest')">
-        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/judas%20priest.jpeg?raw=true">
-        <p>Judas Priest</p>
-    </a>
-</div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('slayer')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/slayer1.jpeg?raw=true">
+                        <p>Slayer</p>
+                    </a>
+                </div>
 
-<div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('charlie brown jr')">
-        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/charlie.jpeg?raw=true">
-        <p>Charlie B. Jr</p>
-    </a>
-</div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('judas priest')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/judas%20priest.jpeg?raw=true">
+                        <p>Judas Priest</p>
+                    </a>
+                </div>
 
-<div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('black sabbath')">
-        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/black1211515.jpeg?raw=true">
-        <p>Black Sabbath</p>
-    </a>
-</div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('charlie brown jr')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/charlie.jpeg?raw=true">
+                        <p>Charlie B. Jr</p>
+                    </a>
+                </div>
 
-<div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('slipknot')">
-        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/slip23222.jpeg?raw=true">
-        <p>Slipknot</p>
-    </a>
-</div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('black sabbath')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/black1211515.jpeg?raw=true">
+                        <p>Black Sabbath</p>
+                    </a>
+                </div>
 
-<div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('system of a down')">
-        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/sistem1512.jpeg?raw=true">
-        <p>System of a Down</p>
-    </a>
-</div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('slipknot')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/slip23222.jpeg?raw=true">
+                        <p>Slipknot</p>
+                    </a>
+                </div>
 
-<div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('green day')">
-        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/greenday1212.jpeg?raw=true">
-        <p>Green Day</p>
-    </a>
-</div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('system of a down')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/sistem1512.jpeg?raw=true">
+                        <p>System of a Down</p>
+                    </a>
+                </div>
 
-<div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('korn')">
-        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/korn15.jpeg?raw=true">
-        <p>Korn</p>
-    </a>
-</div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('green day')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/greenday1212.jpeg?raw=true">
+                        <p>Green Day</p>
+                    </a>
+                </div>
 
-<div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('nirvana')">
-        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/31142_nirvana.jpg?raw=true">
-        <p>Nirvana</p>
-    </a>
-</div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('korn')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/korn15.jpeg?raw=true">
+                        <p>Korn</p>
+                    </a>
+                </div>
 
-<div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('sex pistols')">
-        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/sexpistols23.jpeg?raw=true">
-        <p>Sex Pistols</p>
-    </a>
-</div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('nirvana')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/31142_nirvana.jpg?raw=true">
+                        <p>Nirvana</p>
+                    </a>
+                </div>
 
-<div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('red hot chili peppers')">
-        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/WhatsApp%20Image%202026-10-16%20at%2022.25.14%20(1).jpeg?raw=true">
-        <p>R.H.C.P</p>
-    </a>
-</div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('sex pistols')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/sexpistols23.jpeg?raw=true">
+                        <p>Sex Pistols</p>
+                    </a>
+                </div>
 
-<div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('motorhead')">
-        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/motorhead.jpeg?raw=true">
-        <p>Motorhead</p>
-    </a>
-</div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('red hot chili peppers')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/WhatsApp%20Image%202026-10-16%20at%2022.25.14%20(1).jpeg?raw=true">
+                        <p>R.H.C.P</p>
+                    </a>
+                </div>
 
-<div class="swiper-slide">
-    <a href="javascript:void(0)" onclick="filtrarPorBanda('pantera')">
-        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/pantera1.jpeg?raw=true">
-        <p>Pantera</p>
-    </a>
-</div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('motorhead')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/motorhead.jpeg?raw=true">
+                        <p>Motorhead</p>
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="javascript:void(0)" onclick="filtrarPorBanda('pantera')">
+                        <img
+                            src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/pantera1.jpeg?raw=true">
+                        <p>Pantera</p>
+                    </a>
+                </div>
             </div>
 
             <!-- Botões de navegação -->
@@ -1868,7 +1917,7 @@ MENU BANDAS
         </div>
 
         <div class="container-cards">
-           <div class="card" data-banda="AC/DC" onclick="selecionarProduto('CAMISETA AC/DC')">
+            <div class="card" data-banda="AC/DC" onclick="selecionarProduto('CAMISETA AC/DC')">
 
                 <!--------------------------------------------------------------------------------------------------------------------->
 
@@ -1888,18 +1937,18 @@ MENU BANDAS
 
                     </div>
 
-                    
-                <div class="swiper-pagination"></div>
-            </div>
 
-                
+                    <div class="swiper-pagination"></div>
+                </div>
+
+
                 <div class="info">
                     <p class="nome-produto">CAMISETA AC/DC</p>
                     <p class="preco"><span>Preço</span> R$90,00</p>
                 </div>
-        </div>
-<!--------------------------------------------------------------------------------------------------------------------->
-        <div class="card" data-banda="AC/DC" onclick="selecionarProduto('CAMISETA AC/DC')">
+            </div>
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="AC/DC" onclick="selecionarProduto('CAMISETA AC/DC')">
 
                 <!-- CAIXA 08 -->
                 <div class="swiper produtoSwiper">
@@ -1918,20 +1967,20 @@ MENU BANDAS
 
                     </div>
 
-                    
-                <div class="swiper-pagination"></div>
-            </div>
 
-                
+                    <div class="swiper-pagination"></div>
+                </div>
+
+
                 <div class="info">
                     <p class="nome-produto">CAMISETA AC/DC</p>
                     <p class="preco"><span>Preço</span> R$90,00</p>
                 </div>
-        </div>
+            </div>
 
-<!--------------------------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------------------------->
 
-        <div class="card" data-banda="AC/DC" onclick="selecionarProduto('CAMISETA AC/DC')">
+            <div class="card" data-banda="AC/DC" onclick="selecionarProduto('CAMISETA AC/DC')">
 
                 <!-- CAIXA 08 -->
                 <div class="swiper produtoSwiper">
@@ -1950,21 +1999,21 @@ MENU BANDAS
 
                     </div>
 
-                    
-                <div class="swiper-pagination"></div>
-            </div>
 
-                
+                    <div class="swiper-pagination"></div>
+                </div>
+
+
                 <div class="info">
                     <p class="nome-produto">CAMISETA AC/DC</p>
                     <p class="preco"><span>Preço</span> R$90,00</p>
                 </div>
-        </div>
+            </div>
 
-        <!--------------------------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------------------------->
 
-            <div class="card"data-banda="IRON MAIDEN"onclick="selecionarProduto('CAMISETA IRON MAIDEN')">
-            
+            <div class="card" data-banda="IRON MAIDEN" onclick="selecionarProduto('CAMISETA IRON MAIDEN')">
+
 
                 <div class="etiqueta">+ Vendido</div>
 
@@ -1992,13 +2041,14 @@ MENU BANDAS
                 </div>
             </div>
 
-<!--------------------------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------------------------->
 
             <!-- CAIXA 15 -->
-             <!-- colocar esse quando disponivel e remover a linha abaixo <div class="card" data-banda="GUNS IN ROSES" onclick="selecionarProduto('CAMISETA GUNS IN ROSES')"></div>-->
-             <div class="card"data-banda="GUNS IN ROSES"onclick="event.stopPropagation(); return false;"style="filter:grayscale(100%) brightness(70%); opacity:0.5; cursor:not-allowed;">
+            <!-- colocar esse quando disponivel e remover a linha abaixo <div class="card" data-banda="GUNS IN ROSES" onclick="selecionarProduto('CAMISETA GUNS IN ROSES')"></div>-->
+            <div class="card" data-banda="GUNS IN ROSES" onclick="event.stopPropagation(); return false;"
+                style="filter:grayscale(100%) brightness(70%); opacity:0.5; cursor:not-allowed;">
 
-<div class="etiqueta">Indisponível</div>
+                <div class="etiqueta">Indisponível</div>
 
                 <div class="swiper produtoSwiper">
                     <div class="swiper-wrapper">
@@ -2024,7 +2074,7 @@ MENU BANDAS
                 </div>
             </div>
 
-        <!--------------------------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------------------------->
             <div class="card" data-banda="GUNS IN ROSES" onclick="selecionarProduto('CAMISETA GUNS IN ROSES')">
 
                 <div class="swiper produtoSwiper">
@@ -2083,7 +2133,7 @@ MENU BANDAS
 
             <div class="card" data-banda="IRON MAIDEN" onclick="selecionarProduto('CAMISETA IRON MAIDEN')">
 
-                                <div class="etiqueta-nov">Novidade</div>
+                <div class="etiqueta-nov">Novidade</div>
 
                 <div class="swiper produtoSwiper">
                     <div class="swiper-wrapper">
@@ -2173,7 +2223,7 @@ MENU BANDAS
                 <div class="swiper produtoSwiper">
                     <div class="swiper-wrapper">
 
-                                                <div class="swiper-slide">
+                        <div class="swiper-slide">
                             <img src="https://github.com/paginasvendas/vendadecamisetas/blob/main/IMAGENS/RAMONES.jpeg?raw=true"
                                 alt="CAMISETA RAMONES">
                         </div>
@@ -2195,574 +2245,620 @@ MENU BANDAS
             </div>
 
 
-<!--------------------------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------------------------->
 
-<div class="card" data-banda="ANTHRAX" onclick="selecionarProduto('CAMISETA ANTHRAX')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/antrax1.png?raw=true" alt="CAMISETA ANTHRAX">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/antrax2.png?raw=true" alt="CAMISETA ANTHRAX">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA ANTHRAX</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-
-<div class="card" data-banda="THE DOORS" onclick="selecionarProduto('CAMISETA THE DOORS')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/thedoor2.png?raw=true" alt="CAMISETA THE DOORS">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/thedoors3.png?raw=true" alt="CAMISETA THE DOORS">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA THE DOORS</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-
-<div class="card" data-banda="LINKIN PARK" onclick="selecionarProduto('CAMISETA LINKIN PARK')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/link1000.png?raw=true" alt="CAMISETA LINKIN PARK">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/link1001.png?raw=true" alt="CAMISETA LINKIN PARK">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA LINKIN PARK</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-
-<div class="card" data-banda="LINKIN PARK" onclick="selecionarProduto('CAMISETA LINKIN PARK')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/link2000.png?raw=true" alt="CAMISETA LINKIN PARK">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/link2001.png?raw=true" alt="CAMISETA LINKIN PARK">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA LINKIN PARK</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="card" data-banda="LINKIN PARK" onclick="selecionarProduto('CAMISETA LINKIN PARK')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/linkpark1.png?raw=true" alt="CAMISETA LINKIN PARK">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/linkpark2.png?raw=true" alt="CAMISETA LINKIN PARK">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA LINKIN PARK</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="card" data-banda="LED ZEPPELIN" onclick="selecionarProduto('CAMISETA LED ZEPPELIN')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/led1.png?raw=true" alt="CAMISETA LED ZEPPELIN">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/led2.png?raw=true" alt="CAMISETA LED ZEPPELIN">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA LED ZEPPELIN</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="card" data-banda="MEGADETH" onclick="selecionarProduto('CAMISETA MEGADETH')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/megad1.png?raw=true" alt="CAMISETA MEGADETH">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/megad2.png?raw=true" alt="CAMISETA MEGADETH">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA MEGADETH</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="card" data-banda="MEGADETH" onclick="selecionarProduto('CAMISETA MEGADETH')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/mega1.png?raw=true" alt="CAMISETA MEGADETH">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/mega2.png?raw=true" alt="CAMISETA MEGADETH">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA MEGADETH</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="card" data-banda="SLAYER" onclick="selecionarProduto('CAMISETA SLAYER')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/slayer3.png?raw=true" alt="CAMISETA SLAYER">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/slayer4.png?raw=true" alt="CAMISETA SLAYER">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA SLAYER</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="card" data-banda="JUDAS PRIEST" onclick="selecionarProduto('CAMISETA JUDAS PRIEST')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/judaspriest15.png?raw=true" alt="CAMISETA JUDAS PRIEST">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/judaspriest46.png?raw=true" alt="CAMISETA JUDAS PRIEST">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA JUDAS PRIEST</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="card" data-banda="CHARLIE BROWN JR" onclick="selecionarProduto('CAMISETA CHARLIE BROWN JR')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/charlie10.png?raw=true" alt="CAMISETA CHARLIE BROWN JR">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/charlie11.png?raw=true" alt="CAMISETA CHARLIE BROWN JR">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA CHARLIE BROWN JR</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="card" data-banda="CHARLIE BROWN JR" onclick="selecionarProduto('CAMISETA CHARLIE BROWN JR')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/charlie3000.png?raw=true" alt="CAMISETA CHARLIE BROWN JR">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/charlie3001.png?raw=true" alt="CAMISETA CHARLIE BROWN JR">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA CHARLIE BROWN JR</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="card" data-banda="BLACK SABBATH" onclick="selecionarProduto('CAMISETA BLACK SABBATH')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/black1.png?raw=true" alt="CAMISETA BLACK SABBATH">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/black2.png?raw=true" alt="CAMISETA BLACK SABBATH">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA BLACK SABBATH</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="card" data-banda="BLACK SABBATH" onclick="selecionarProduto('CAMISETA BLACK SABBATH')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/black1212.png?raw=true" alt="CAMISETA BLACK SABBATH">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/black1313.png?raw=true" alt="CAMISETA BLACK SABBATH">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA BLACK SABBATH</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="card" data-banda="SLIPKNOT" onclick="selecionarProduto('CAMISETA SLIPKNOT')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/slip1.png?raw=true" alt="CAMISETA SLIPKNOT">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/slip2.png?raw=true" alt="CAMISETA SLIPKNOT">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA SLIPKNOT</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="card" data-banda="SYSTEM OF A DOWN" onclick="selecionarProduto('CAMISETA SYSTEM OF A DOWN')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/sistem1000.png?raw=true" alt="CAMISETA SYSTEM OF A DOWN">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/sistem1001.png?raw=true" alt="CAMISETA SYSTEM OF A DOWN">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA SYSTEM OF A DOWN</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="card" data-banda="GREEN DAY" onclick="selecionarProduto('CAMISETA GREEN DAY')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/green1.png?raw=true" alt="CAMISETA GREEN DAY">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/green2.png?raw=true" alt="CAMISETA GREEN DAY">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA GREEN DAY</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="card" data-banda="KORN" onclick="selecionarProduto('CAMISETA KORN')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/korn1.png?raw=true" alt="CAMISETA KORN">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/korn2.png?raw=true" alt="CAMISETA KORN">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA KORN</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="card" data-banda="NIRVANA" onclick="selecionarProduto('CAMISETA NIRVANA')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/nirvana1.png?raw=true" alt="CAMISETA NIRVANA">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/nirvana2.png?raw=true" alt="CAMISETA NIRVANA">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA NIRVANA</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="card" data-banda="SEX PISTOLS" onclick="selecionarProduto('CAMISETA SEX PISTOLS')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/sexpistols1.png?raw=true" alt="CAMISETA SEX PISTOLS">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/sexpistols2.png?raw=true" alt="CAMISETA SEX PISTOLS">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA SEX PISTOLS</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="card" data-banda="RED HOT CHILI PEPPERS" onclick="selecionarProduto('CAMISETA RED HOT CHILI PEPPERS')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/rhcp1.png?raw=true" alt="CAMISETA RED HOT CHILI PEPPERS">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/rhcp2.png?raw=true" alt="CAMISETA RED HOT CHILI PEPPERS">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA RED HOT CHILI PEPPERS</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="card" data-banda="MOTORHEAD" onclick="selecionarProduto('CAMISETA MOTORHEAD')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/motor1.png?raw=true" alt="CAMISETA MOTORHEAD">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/motor2.png?raw=true" alt="CAMISETA MOTORHEAD">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA MOTORHEAD</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="card" data-banda="PANTERA" onclick="selecionarProduto('CAMISETA PANTERA')">
-    <div class="swiper produtoSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/pantera1.png?raw=true" alt="CAMISETA PANTERA">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/pantera2.png?raw=true" alt="CAMISETA PANTERA">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="info">
-        <p class="nome-produto">CAMISETA PANTERA</p>
-        <p class="preco"><span>Preço</span> R$60,00</p>
-    </div>
-</div>
-<!--------------------------------------------------------------------------------------------------------------------->
-
-
-
-        <footer class="footer">
-            <div class="footer-container">
-
-
-                <div class="footer-section">
-                    <h4>Contato</h4>
-                    <p>
-                        <i class="fab fa-whatsapp mr-2 pt-2" style="margin-right:5px;font-size:1em;"></i>
-                        <a href="https://wa.me/5535997378247" target="_blank" rel="noopener noreferrer">
-                            (35) 99737-8247
-                        </a>
-                    </p>
+            <div class="card" data-banda="ANTHRAX" onclick="selecionarProduto('CAMISETA ANTHRAX')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/antrax1.png?raw=true"
+                                alt="CAMISETA ANTHRAX">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/antrax2.png?raw=true"
+                                alt="CAMISETA ANTHRAX">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-
-                <div class="footer-section">
-                    <h4>Endereço</h4>
-                    <p class="endereco">
-                        <i class="fas fa-map-marker-alt mr-2 pt-2" style="margin-right:5px;font-size:1em;"></i><a>
-                            R. Antônio S. Batista, 231 – Pedro Scariot</a>
-                    </p>
-
-                    <p class="map-links">
-                        <a href="https://maps.app.goo.gl/zeXNEQfvKMCJwLbo9" target="_blank" rel="noopener noreferrer">
-                            <i class="fas fa-map-marked-alt mr-2 pt-2" style="margin-right:5px;font-size:1em;"></i>Abrir
-                            localização</a>
-                        <a href="javascript:void(0)" onclick="compartilharLocalizacao()" title="Compartilhar endereço"
-                            class="btn-compartilhar">
-                            <i class="fas fa-share-alt-square"
-                                style="font-size:1em; cursor:pointer;display: inline-flex;"></i>
-                            <span class="texto-compartilhar">Compartilhar</span>
-                        </a>
-
-                    </p>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA ANTHRAX</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
                 </div>
+            </div>
 
-                                <div class="footer-section">
-                    <h4>Pagamentos</h4>
-                    <div class="social-links">
-                        <i class="fa-brands fa-pix" style="margin-right:5px;font-size:16px;"></i>
-                        <i class="fa-solid fa-credit-card" style="margin-right:5px;font-size:16px;"></i>
-                        <i class="fa-regular fa-money-bill-1" style="margin-right:5px;font-size: 20px;"></i>   
+            <!--------------------------------------------------------------------------------------------------------------------->
 
+            <div class="card" data-banda="THE DOORS" onclick="selecionarProduto('CAMISETA THE DOORS')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/thedoor2.png?raw=true"
+                                alt="CAMISETA THE DOORS">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/thedoors3.png?raw=true"
+                                alt="CAMISETA THE DOORS">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA THE DOORS</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+
+            <div class="card" data-banda="LINKIN PARK" onclick="selecionarProduto('CAMISETA LINKIN PARK')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/link1000.png?raw=true"
+                                alt="CAMISETA LINKIN PARK">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/link1001.png?raw=true"
+                                alt="CAMISETA LINKIN PARK">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA LINKIN PARK</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+
+            <div class="card" data-banda="LINKIN PARK" onclick="selecionarProduto('CAMISETA LINKIN PARK')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/link2000.png?raw=true"
+                                alt="CAMISETA LINKIN PARK">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/link2001.png?raw=true"
+                                alt="CAMISETA LINKIN PARK">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA LINKIN PARK</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="LINKIN PARK" onclick="selecionarProduto('CAMISETA LINKIN PARK')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/linkpark1.png?raw=true"
+                                alt="CAMISETA LINKIN PARK">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/linkpark2.png?raw=true"
+                                alt="CAMISETA LINKIN PARK">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA LINKIN PARK</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="LED ZEPPELIN" onclick="selecionarProduto('CAMISETA LED ZEPPELIN')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/led1.png?raw=true"
+                                alt="CAMISETA LED ZEPPELIN">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/led2.png?raw=true"
+                                alt="CAMISETA LED ZEPPELIN">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA LED ZEPPELIN</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="MEGADETH" onclick="selecionarProduto('CAMISETA MEGADETH')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/megad1.png?raw=true"
+                                alt="CAMISETA MEGADETH">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/megad2.png?raw=true"
+                                alt="CAMISETA MEGADETH">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA MEGADETH</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="MEGADETH" onclick="selecionarProduto('CAMISETA MEGADETH')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/mega1.png?raw=true"
+                                alt="CAMISETA MEGADETH">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/mega2.png?raw=true"
+                                alt="CAMISETA MEGADETH">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA MEGADETH</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="SLAYER" onclick="selecionarProduto('CAMISETA SLAYER')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/slayer3.png?raw=true"
+                                alt="CAMISETA SLAYER">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/slayer4.png?raw=true"
+                                alt="CAMISETA SLAYER">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA SLAYER</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="JUDAS PRIEST" onclick="selecionarProduto('CAMISETA JUDAS PRIEST')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/judaspriest15.png?raw=true"
+                                alt="CAMISETA JUDAS PRIEST">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/judaspriest46.png?raw=true"
+                                alt="CAMISETA JUDAS PRIEST">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA JUDAS PRIEST</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="CHARLIE BROWN JR" onclick="selecionarProduto('CAMISETA CHARLIE BROWN JR')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/charlie10.png?raw=true"
+                                alt="CAMISETA CHARLIE BROWN JR">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/charlie11.png?raw=true"
+                                alt="CAMISETA CHARLIE BROWN JR">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA CHARLIE BROWN JR</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="CHARLIE BROWN JR" onclick="selecionarProduto('CAMISETA CHARLIE BROWN JR')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/charlie3000.png?raw=true"
+                                alt="CAMISETA CHARLIE BROWN JR">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/charlie3001.png?raw=true"
+                                alt="CAMISETA CHARLIE BROWN JR">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA CHARLIE BROWN JR</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="BLACK SABBATH" onclick="selecionarProduto('CAMISETA BLACK SABBATH')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/black1.png?raw=true"
+                                alt="CAMISETA BLACK SABBATH">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/black2.png?raw=true"
+                                alt="CAMISETA BLACK SABBATH">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA BLACK SABBATH</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="BLACK SABBATH" onclick="selecionarProduto('CAMISETA BLACK SABBATH')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/black1212.png?raw=true"
+                                alt="CAMISETA BLACK SABBATH">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/black1313.png?raw=true"
+                                alt="CAMISETA BLACK SABBATH">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA BLACK SABBATH</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="SLIPKNOT" onclick="selecionarProduto('CAMISETA SLIPKNOT')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/slip1.png?raw=true"
+                                alt="CAMISETA SLIPKNOT">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/slip2.png?raw=true"
+                                alt="CAMISETA SLIPKNOT">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA SLIPKNOT</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="SYSTEM OF A DOWN" onclick="selecionarProduto('CAMISETA SYSTEM OF A DOWN')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/sistem1000.png?raw=true"
+                                alt="CAMISETA SYSTEM OF A DOWN">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/sistem1001.png?raw=true"
+                                alt="CAMISETA SYSTEM OF A DOWN">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA SYSTEM OF A DOWN</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="GREEN DAY" onclick="selecionarProduto('CAMISETA GREEN DAY')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/green1.png?raw=true"
+                                alt="CAMISETA GREEN DAY">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/green2.png?raw=true"
+                                alt="CAMISETA GREEN DAY">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA GREEN DAY</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="KORN" onclick="selecionarProduto('CAMISETA KORN')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/korn1.png?raw=true"
+                                alt="CAMISETA KORN">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/korn2.png?raw=true"
+                                alt="CAMISETA KORN">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA KORN</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="NIRVANA" onclick="selecionarProduto('CAMISETA NIRVANA')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/nirvana1.png?raw=true"
+                                alt="CAMISETA NIRVANA">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/nirvana2.png?raw=true"
+                                alt="CAMISETA NIRVANA">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA NIRVANA</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="SEX PISTOLS" onclick="selecionarProduto('CAMISETA SEX PISTOLS')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/sexpistols1.png?raw=true"
+                                alt="CAMISETA SEX PISTOLS">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/sexpistols2.png?raw=true"
+                                alt="CAMISETA SEX PISTOLS">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA SEX PISTOLS</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="RED HOT CHILI PEPPERS"
+                onclick="selecionarProduto('CAMISETA RED HOT CHILI PEPPERS')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/rhcp1.png?raw=true"
+                                alt="CAMISETA RED HOT CHILI PEPPERS">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/rhcp2.png?raw=true"
+                                alt="CAMISETA RED HOT CHILI PEPPERS">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA RED HOT CHILI PEPPERS</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="MOTORHEAD" onclick="selecionarProduto('CAMISETA MOTORHEAD')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/motor1.png?raw=true"
+                                alt="CAMISETA MOTORHEAD">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/motor2.png?raw=true"
+                                alt="CAMISETA MOTORHEAD">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA MOTORHEAD</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+            <div class="card" data-banda="PANTERA" onclick="selecionarProduto('CAMISETA PANTERA')">
+                <div class="swiper produtoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/pantera1.png?raw=true"
+                                alt="CAMISETA PANTERA">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/pantera2.png?raw=true"
+                                alt="CAMISETA PANTERA">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="info">
+                    <p class="nome-produto">CAMISETA PANTERA</p>
+                    <p class="preco"><span>Preço</span> R$60,00</p>
+                </div>
+            </div>
+            <!--------------------------------------------------------------------------------------------------------------------->
+
+
+
+            <footer class="footer">
+                <div class="footer-container">
+
+
+                    <div class="footer-section">
+                        <h4>Contato</h4>
+                        <p>
+                            <i class="fab fa-whatsapp mr-2 pt-2" style="margin-right:5px;font-size:1em;"></i>
+                            <a href="https://wa.me/5535997378247" target="_blank" rel="noopener noreferrer">
+                                (35) 99737-8247
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Endereço</h4>
+                        <p class="endereco">
+                            <i class="fas fa-map-marker-alt mr-2 pt-2" style="margin-right:5px;font-size:1em;"></i><a>
+                                R. Antônio S. Batista, 231 – Pedro Scariot</a>
+                        </p>
+
+                        <p class="map-links">
+                            <a href="https://maps.app.goo.gl/zeXNEQfvKMCJwLbo9" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fas fa-map-marked-alt mr-2 pt-2"
+                                    style="margin-right:5px;font-size:1em;"></i>Abrir
+                                localização</a>
+                            <a href="javascript:void(0)" onclick="compartilharLocalizacao()"
+                                title="Compartilhar endereço" class="btn-compartilhar">
+                                <i class="fas fa-share-alt-square"
+                                    style="font-size:1em; cursor:pointer;display: inline-flex;"></i>
+                                <span class="texto-compartilhar">Compartilhar</span>
+                            </a>
+
+                        </p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Pagamentos</h4>
+                        <div class="social-links">
+                            <i class="fa-brands fa-pix" style="margin-right:5px;font-size:16px;"></i>
+                            <i class="fa-solid fa-credit-card" style="margin-right:5px;font-size:16px;"></i>
+                            <i class="fa-regular fa-money-bill-1" style="margin-right:5px;font-size: 20px;"></i>
+
+
+                        </div>
 
                     </div>
 
-                </div>
 
-                <div class="footer-section">
-<!-- redes sociais INICIO-->
 
-<!-- redes sociais FIM-->
+
 
                 </div>
 
 
 
-            </div>
+            </footer>
 
             <div class="footer-bottom">
                 Camisetas de Bandas 2026.
             </div>
-            
-        </footer>
 
 
-
-    </div>
-    <div id="produtoSelecionado" class="hidden">
-        <img id="produtoImagem" src="" alt="Imagem do Produto" style="max-width: 100%; margin-bottom: 15px;">
-        <h2 id="produtoNome"></h2>
-        <div class="quantidadeSabores">
-        </div>
-
-        <div class="quantidadeSabores">
-            <span>Selecionar os Tamanhos</span>
-        </div>
-
-        <div id="sabores">
-            <label>
-    <input type="checkbox" value="Tamanho P">
-    P
-</label>
-
-<label>
-    <input type="checkbox" value="Tamanho M">
-    M
-</label>
-
-<label>
-    <input type="checkbox" value="Tamanho G">
-    G
-</label>
-
-<label>
-    <input type="checkbox" value="Tamanho GG">
-    GG
-</label>
-
-<label>
-    <input type="checkbox" value="Tamanho XGG">
-    XGG
-</label>
 
         </div>
+        <div id="produtoSelecionado" class="hidden">
+            <img id="produtoImagem" src="" alt="Imagem do Produto" style="max-width: 100%; margin-bottom: 15px;">
+            <h2 id="produtoNome"></h2>
+            <div class="quantidadeSabores">
+            </div>
+
+            <div class="quantidadeSabores">
+                <span>Selecionar os Tamanhos</span>
+            </div>
+
+            <div id="sabores">
+                <label>
+                    <input type="checkbox" value="Tamanho P">
+                    P
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Tamanho M">
+                    M
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Tamanho G">
+                    G
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Tamanho GG">
+                    GG
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Tamanho XGG">
+                    XGG
+                </label>
+
+            </div>
 
 
-        <button class="button" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
-        <button id="voltarHomeBtnProduto" class="checkout-btn" onclick="voltarHome()">Voltar Home</button>
+            <button class="button" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+            <button id="voltarHomeBtnProduto" class="checkout-btn" onclick="voltarHome()">Voltar Home</button>
 
 
-    </div>
+        </div>
 
-    <div id="carrinho" class="hidden">
-        <h2>Carrinho <span class="cart-icon"></span></h2>
-        <div id="quantidadeTotalCarrinho"></div>
-        <div id="itensCarrinho"></div>
-        <p>Total: R$ <span id="totalCarrinho"></span></p>
+        <div id="carrinho" class="hidden">
+            <h2>Carrinho <span class="cart-icon"></span></h2>
+            <div id="quantidadeTotalCarrinho"></div>
+            <div id="itensCarrinho"></div>
+            <p>Total: R$ <span id="totalCarrinho"></span></p>
 
 
-        <button id="finalizarCompra" class="button" onclick="mostrarCheckout()">Finalizar Compra</button>
-        <button id="voltarHomeBtn" class="checkout-btn">Continuar comprando</button>
+            <button id="finalizarCompra" class="button" onclick="mostrarCheckout()">Finalizar Compra</button>
+            <button id="voltarHomeBtn" class="checkout-btn">Continuar comprando</button>
 
-    </div>
+        </div>
     </div>
 
     <div id="checkout" class="hidden">
@@ -2781,7 +2877,7 @@ MENU BANDAS
 
         <h3><i class="fas fa-motorcycle mr-2"></i> Forma de Entrega:</h3>
 
-<div id="infoFreteGratis"></div>
+        <div id="infoFreteGratis"></div>
 
         <label><input type="radio" name="entrega" value="retirada" onclick="selecionarEntrega('retirada')">
             Retirar no Local</label>
@@ -2807,7 +2903,8 @@ MENU BANDAS
 
         <h3><i class="fa-regular fa-money-bill-1" style="font-size: 18px;"></i> Forma de Pagamento:
         </h3>
-        <label><input type="checkbox" name="pagamento" value="Pix" onclick="habilitarFinalizar()"> Pix (copia e cola)</label>
+        <label><input type="checkbox" name="pagamento" value="Pix" onclick="habilitarFinalizar()"> Pix (copia e
+            cola)</label>
 
         <div id="pixChave" class="pix-container">
             <img src="https://cdn.awsli.com.br/2396/2396648/arquivos/pix_icon.svg" alt="Ícone Pix" class="pix-icon"
@@ -2854,11 +2951,11 @@ MENU BANDAS
         <button onclick="adicionarAoCarrinho()">Adicionar ao carrinho</button>
     </div>
 
-    
-<!-- Botão Voltar ao Topo -->
-<button id="btnVoltarTopo" aria-label="Voltar ao topo" title="Voltar ao topo">
-    <i class="fa-solid fa-chevron-up"></i>
-</button>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="btnVoltarTopo" aria-label="Voltar ao topo" title="Voltar ao topo">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
 
 
@@ -3014,7 +3111,7 @@ MENU BANDAS
             document.getElementById("statusAbertoFechado")
                 ?.classList.remove("hidden");
 
-                controlarReviewsHome();
+            controlarReviewsHome();
 
             carregarCarrinho();
         }
@@ -3085,114 +3182,114 @@ MENU BANDAS
         /* =======================
         ADICIONAR AO CARRINHO
         ======================= */
-function adicionarAoCarrinho() {
+        function adicionarAoCarrinho() {
 
-    let produto = document.getElementById('produtoNome').innerText;
+            let produto = document.getElementById('produtoNome').innerText;
 
-    let saboresSelecionados =
-        document.querySelectorAll('#sabores input:checked');
+            let saboresSelecionados =
+                document.querySelectorAll('#sabores input:checked');
 
-    let saboresNovos = [];
+            let saboresNovos = [];
 
-    let imagemProduto =
-        document.getElementById('produtoImagem').src;
+            let imagemProduto =
+                document.getElementById('produtoImagem').src;
 
-    if (saboresSelecionados.length === 0) {
-        alert("Escolha pelo menos um tamanho.");
-        return;
-    }
-
-    // 🔥 procura card do produto
-    const card = Array.from(document.querySelectorAll(".card"))
-        .find(c =>
-            c.getAttribute("onclick").includes(produto)
-        );
-
-    let precoProduto = 0;
-
-    if (card) {
-
-        const precoTexto =
-            card.querySelector(".preco").innerText;
-
-        precoProduto = parseFloat(
-            precoTexto
-                .replace("Preço", "")
-                .replace("R$", "")
-                .replace(",", ".")
-                .trim()
-        );
-    }
-
-    saboresSelecionados.forEach(sabor => {
-
-        let quantidade = 1;
-
-        // mantém quantidade antiga ao editar
-        if (produtoEditandoIndex !== null) {
-
-            const saborAntigo =
-                carrinho[produtoEditandoIndex]
-                    .sabores
-                    .find(s => s.nome === sabor.value);
-
-            if (saborAntigo) {
-                quantidade = saborAntigo.quantidade;
+            if (saboresSelecionados.length === 0) {
+                alert("Escolha pelo menos um tamanho.");
+                return;
             }
+
+            // 🔥 procura card do produto
+            const card = Array.from(document.querySelectorAll(".card"))
+                .find(c =>
+                    c.getAttribute("onclick").includes(produto)
+                );
+
+            let precoProduto = 0;
+
+            if (card) {
+
+                const precoTexto =
+                    card.querySelector(".preco").innerText;
+
+                precoProduto = parseFloat(
+                    precoTexto
+                        .replace("Preço", "")
+                        .replace("R$", "")
+                        .replace(",", ".")
+                        .trim()
+                );
+            }
+
+            saboresSelecionados.forEach(sabor => {
+
+                let quantidade = 1;
+
+                // mantém quantidade antiga ao editar
+                if (produtoEditandoIndex !== null) {
+
+                    const saborAntigo =
+                        carrinho[produtoEditandoIndex]
+                            .sabores
+                            .find(s => s.nome === sabor.value);
+
+                    if (saborAntigo) {
+                        quantidade = saborAntigo.quantidade;
+                    }
+                }
+
+                saboresNovos.push({
+                    nome: sabor.value,
+                    quantidade: quantidade
+                });
+
+                sabor.checked = false;
+            });
+
+            // 🔥 quantidade total
+            let quantidadeTotal = saboresNovos.reduce(
+                (t, s) => t + s.quantidade,
+                0
+            );
+
+            let precoTotal =
+                precoProduto * quantidadeTotal;
+
+            if (produtoEditandoIndex !== null) {
+
+                carrinho[produtoEditandoIndex] = {
+                    ...carrinho[produtoEditandoIndex],
+                    sabores: saboresNovos,
+                    precoUnitario: precoProduto,
+                    precoTotal: precoTotal
+                };
+
+                produtoEditandoIndex = null;
+
+            } else {
+
+                carrinho.push({
+                    produto,
+                    sabores: saboresNovos,
+                    precoUnitario: precoProduto,
+                    precoTotal: precoTotal,
+                    imagemProduto
+                });
+            }
+
+            salvarCarrinho();
+            atualizarCarrinho();
+            atualizarContadorCarrinho();
+
+            document.getElementById('produtoSelecionado')
+                .classList.add('hidden');
+
+            document.getElementById('carrinho')
+                .classList.remove('hidden');
+
+            esconderHeaderCheckout();
+            esconderFooter();
         }
-
-        saboresNovos.push({
-            nome: sabor.value,
-            quantidade: quantidade
-        });
-
-        sabor.checked = false;
-    });
-
-    // 🔥 quantidade total
-    let quantidadeTotal = saboresNovos.reduce(
-        (t, s) => t + s.quantidade,
-        0
-    );
-
-    let precoTotal =
-        precoProduto * quantidadeTotal;
-
-    if (produtoEditandoIndex !== null) {
-
-        carrinho[produtoEditandoIndex] = {
-            ...carrinho[produtoEditandoIndex],
-            sabores: saboresNovos,
-            precoUnitario: precoProduto,
-            precoTotal: precoTotal
-        };
-
-        produtoEditandoIndex = null;
-
-    } else {
-
-        carrinho.push({
-            produto,
-            sabores: saboresNovos,
-            precoUnitario: precoProduto,
-            precoTotal: precoTotal,
-            imagemProduto
-        });
-    }
-
-    salvarCarrinho();
-    atualizarCarrinho();
-    atualizarContadorCarrinho();
-
-    document.getElementById('produtoSelecionado')
-        .classList.add('hidden');
-
-    document.getElementById('carrinho')
-        .classList.remove('hidden');
-
-    esconderHeaderCheckout();
-    esconderFooter();
-}
 
 
         /* =======================
@@ -3297,78 +3394,78 @@ function adicionarAoCarrinho() {
         ======================= */
         function ajustarQuantidadeSabor(produtoIndex, saborIndex, delta) {
 
-    let produto = carrinho[produtoIndex];
+            let produto = carrinho[produtoIndex];
 
-    let sabor = produto.sabores[saborIndex];
+            let sabor = produto.sabores[saborIndex];
 
-    // impede menor que 1
-    if (delta < 0 && sabor.quantidade === 1) {
-        return;
-    }
+            // impede menor que 1
+            if (delta < 0 && sabor.quantidade === 1) {
+                return;
+            }
 
-    // altera quantidade
-    sabor.quantidade += delta;
+            // altera quantidade
+            sabor.quantidade += delta;
 
-    // 🔥 soma total das quantidades
-    let quantidadeTotal = produto.sabores.reduce(
-        (t, s) => t + s.quantidade,
-        0
-    );
+            // 🔥 soma total das quantidades
+            let quantidadeTotal = produto.sabores.reduce(
+                (t, s) => t + s.quantidade,
+                0
+            );
 
-    // 🔥 recalcula total correto
-    produto.precoTotal =
-        quantidadeTotal * produto.precoUnitario;
+            // 🔥 recalcula total correto
+            produto.precoTotal =
+                quantidadeTotal * produto.precoUnitario;
 
-    salvarCarrinho();
-    atualizarCarrinho();
-}
+            salvarCarrinho();
+            atualizarCarrinho();
+        }
 
         function removerSabor(produtoIndex, saborIndex) {
 
-    let produto = carrinho[produtoIndex];
+            let produto = carrinho[produtoIndex];
 
-    // remove tamanho
-    produto.sabores.splice(saborIndex, 1);
+            // remove tamanho
+            produto.sabores.splice(saborIndex, 1);
 
-    // remove produto inteiro
-    if (produto.sabores.length === 0) {
+            // remove produto inteiro
+            if (produto.sabores.length === 0) {
 
-        carrinho.splice(produtoIndex, 1);
+                carrinho.splice(produtoIndex, 1);
 
-    } else {
+            } else {
 
-        // 🔥 recalcula quantidade
-        let quantidadeTotal = produto.sabores.reduce(
-            (t, s) => t + s.quantidade,
-            0
-        );
+                // 🔥 recalcula quantidade
+                let quantidadeTotal = produto.sabores.reduce(
+                    (t, s) => t + s.quantidade,
+                    0
+                );
 
-        // 🔥 recalcula valor
-        produto.precoTotal =
-            quantidadeTotal * produto.precoUnitario;
-    }
+                // 🔥 recalcula valor
+                produto.precoTotal =
+                    quantidadeTotal * produto.precoUnitario;
+            }
 
-    salvarCarrinho();
-    atualizarCarrinho();
-    atualizarContadorCarrinho();
-}
+            salvarCarrinho();
+            atualizarCarrinho();
+            atualizarContadorCarrinho();
+        }
 
 
 
-function removerDoCarrinho(index) {
+        function removerDoCarrinho(index) {
 
-    // remove produto inteiro
-    carrinho.splice(index, 1);
+            // remove produto inteiro
+            carrinho.splice(index, 1);
 
-    salvarCarrinho();
-    atualizarCarrinho();
-    atualizarContadorCarrinho();
+            salvarCarrinho();
+            atualizarCarrinho();
+            atualizarContadorCarrinho();
 
-    // volta pra home se carrinho vazio
-    if (carrinho.length === 0) {
-        voltarHome();
-    }
-}
+            // volta pra home se carrinho vazio
+            if (carrinho.length === 0) {
+                voltarHome();
+            }
+        }
 
 
 
@@ -3383,69 +3480,69 @@ function removerDoCarrinho(index) {
         /* =======================
         ENTREGA / CHECKOUT
         ======================= */
-function selecionarEntrega(tipo) {
-    entregaSelecionada = tipo;
-    document.getElementById("enderecoEntrega").classList.toggle("hidden", tipo !== "entrega");
+        function selecionarEntrega(tipo) {
+            entregaSelecionada = tipo;
+            document.getElementById("enderecoEntrega").classList.toggle("hidden", tipo !== "entrega");
 
-    // Atualiza PIX dinamicamente
-    const valorFinal = calcularTotalFinal();
-    const pixCode = gerarPixCopiaECola(valorFinal);
-    document.getElementById("chavePix").innerText = pixCode;
+            // Atualiza PIX dinamicamente
+            const valorFinal = calcularTotalFinal();
+            const pixCode = gerarPixCopiaECola(valorFinal);
+            document.getElementById("chavePix").innerText = pixCode;
 
-    atualizarCarrinho(); // mantem carrinho correto (só produtos)
-}
+            atualizarCarrinho(); // mantem carrinho correto (só produtos)
+        }
 
-function mostrarCheckout() {
-    if (carrinho.length === 0) {
-        alert("Carrinho vazio");
-        return;
-    }
+        function mostrarCheckout() {
+            if (carrinho.length === 0) {
+                alert("Carrinho vazio");
+                return;
+            }
 
-    document.getElementById("checkout").classList.remove("hidden");
-    document.getElementById("carrinho").classList.add("hidden");
+            document.getElementById("checkout").classList.remove("hidden");
+            document.getElementById("carrinho").classList.add("hidden");
 
-    esconderHeaderCheckout();
-    controlarReviewsHome();
+            esconderHeaderCheckout();
+            controlarReviewsHome();
 
-    // ✅ usa cálculo correto
-    const valorFinal = calcularTotalFinal();
-const pixCode = gerarPixCopiaECola(valorFinal);
-document.getElementById("chavePix").innerText = pixCode;
+            // ✅ usa cálculo correto
+            const valorFinal = calcularTotalFinal();
+            const pixCode = gerarPixCopiaECola(valorFinal);
+            document.getElementById("chavePix").innerText = pixCode;
 
-const infoFrete = document.getElementById("infoFreteGratis");
+            const infoFrete = document.getElementById("infoFreteGratis");
 
-let totalProdutos = carrinho.reduce(
-    (t, item) => t + item.precoTotal,
-    0
-);
+            let totalProdutos = carrinho.reduce(
+                (t, item) => t + item.precoTotal,
+                0
+            );
 
-const linhaTaxaEntrega =
-    document.getElementById("linhaTaxaEntrega");
+            const linhaTaxaEntrega =
+                document.getElementById("linhaTaxaEntrega");
 
-if (totalProdutos >= valorFreteGratis) {
+            if (totalProdutos >= valorFreteGratis) {
 
-    infoFrete.innerHTML =
-        "Você Ganhou Entrega Grátis!";
+                infoFrete.innerHTML =
+                    "Você Ganhou Entrega Grátis!";
 
-    infoFrete.style.background = "#28a745";
-    infoFrete.style.color = "#fff";
+                infoFrete.style.background = "#28a745";
+                infoFrete.style.color = "#fff";
 
-    linhaTaxaEntrega.style.display = "none";
+                linhaTaxaEntrega.style.display = "none";
 
-} else {
+            } else {
 
-    let falta = valorFreteGratis - totalProdutos;
+                let falta = valorFreteGratis - totalProdutos;
 
-    infoFrete.innerHTML =
-        `Faltam R$ ${falta.toFixed(2)} Para Ganhar Entrega Grátis`;
+                infoFrete.innerHTML =
+                    `Faltam R$ ${falta.toFixed(2)} Para Ganhar Entrega Grátis`;
 
-    infoFrete.style.background = "#d4a017";
-    infoFrete.style.color = "#4c2a00";
+                infoFrete.style.background = "#d4a017";
+                infoFrete.style.color = "#4c2a00";
 
-    linhaTaxaEntrega.style.display = "block";
-}
+                linhaTaxaEntrega.style.display = "block";
+            }
 
-}
+        }
 
 
 
@@ -3526,11 +3623,11 @@ if (totalProdutos >= valorFreteGratis) {
             let totalProdutos = carrinho.reduce((t, item) => t + item.precoTotal, 0);
             let totalPedidoFinal = totalProdutos;
             if (
-    entrega === "entrega" &&
-    totalProdutos < valorFreteGratis
-) {
-    totalPedidoFinal += taxaEntrega;
-}
+                entrega === "entrega" &&
+                totalProdutos < valorFreteGratis
+            ) {
+                totalPedidoFinal += taxaEntrega;
+            }
 
             let mensagem =
                 `Pedido *#${pedidoNumero}*
@@ -3557,17 +3654,17 @@ if (totalProdutos >= valorFreteGratis) {
             mensagem += `Total produtos: R$ ${totalProdutos.toFixed(2)}\n`;
             if (entrega === "entrega") {
 
-    if (totalProdutos >= valorFreteGratis) {
+                if (totalProdutos >= valorFreteGratis) {
 
-        mensagem += `Taxa de entrega: GRATIS\n`;
+                    mensagem += `Taxa de entrega: GRATIS\n`;
 
-    } else {
+                } else {
 
-        mensagem += `Taxa de entrega: R$ ${taxaEntrega.toFixed(2)}\n`;
+                    mensagem += `Taxa de entrega: R$ ${taxaEntrega.toFixed(2)}\n`;
 
-    }
+                }
 
-}
+            }
             mensagem += `Total geral: R$ ${totalPedidoFinal.toFixed(2)}\n\n`;
 
             const pixCheckbox = document.querySelector('input[name="pagamento"][value="Pix"]');
@@ -3980,7 +4077,7 @@ if (totalProdutos >= valorFreteGratis) {
         const selecionarProdutoOriginal = selecionarProduto;
         selecionarProduto = function (nomeProduto) {
             selecionarProdutoOriginal(nomeProduto);
-  
+
 
             const checkboxes = document.querySelectorAll("#sabores input[type=checkbox]");
             checkboxes.forEach(cb => {
@@ -3995,17 +4092,17 @@ if (totalProdutos >= valorFreteGratis) {
 
 
         document.addEventListener("change", function (e) {
-    if (!e.target.matches("#sabores input[type=checkbox]")) return;
+            if (!e.target.matches("#sabores input[type=checkbox]")) return;
 
-    const checkboxes = document.querySelectorAll("#sabores input[type=checkbox]");
-    const selecionados = Array.from(checkboxes).filter(cb => cb.checked);
+            const checkboxes = document.querySelectorAll("#sabores input[type=checkbox]");
+            const selecionados = Array.from(checkboxes).filter(cb => cb.checked);
 
-    const contador = document.getElementById("contadorSabores");
+            const contador = document.getElementById("contadorSabores");
 
-    if (contador) {
-        contador.innerText = `${selecionados.length} sabores`;
-    }
-});
+            if (contador) {
+                contador.innerText = `${selecionados.length} sabores`;
+            }
+        });
 
 
 
@@ -4028,183 +4125,183 @@ if (totalProdutos >= valorFreteGratis) {
         //esconder avaliações
         function controlarReviewsHome() {
 
-    const reviews = document.getElementById("reviewsHome");
-    if (!reviews) return;
+            const reviews = document.getElementById("reviewsHome");
+            if (!reviews) return;
 
-    const produto = document.getElementById("produtoSelecionado");
-    const carrinho = document.getElementById("carrinho");
-    const checkout = document.getElementById("checkout");
+            const produto = document.getElementById("produtoSelecionado");
+            const carrinho = document.getElementById("carrinho");
+            const checkout = document.getElementById("checkout");
 
-    const estaNaHome =
-        produto.classList.contains("hidden") &&
-        carrinho.classList.contains("hidden") &&
-        checkout.classList.contains("hidden");
+            const estaNaHome =
+                produto.classList.contains("hidden") &&
+                carrinho.classList.contains("hidden") &&
+                checkout.classList.contains("hidden");
 
-    if (estaNaHome) {
-        reviews.style.display = "block";
-    } else {
-        reviews.style.display = "none";
-    }
-}
-
-/*chave pix copia e cola*/
-
-function calcularTotalFinal() {
-
-    let totalProdutos = carrinho.reduce(
-        (t, item) => t + item.precoTotal,
-        0
-    );
-
-    if (
-        entregaSelecionada === "entrega" &&
-        totalProdutos < valorFreteGratis
-    ) {
-        return totalProdutos + taxaEntrega;
-    }
-
-    return totalProdutos;
-}
-
-function gerarPixCopiaECola(valor) {
-    const chave = "bomdocepm@gmail.com";
-    const nome = "BOMDOCE";
-    const cidade = "PALMEIRA DAS MISSOES";
-
-    function formatar(valor) {
-        return valor.toString().padStart(2, "0");
-    }
-
-    function montarCampo(id, valor) {
-        return id + formatar(valor.length) + valor;
-    }
-
-    // 🔥 GARANTE FORMATO CORRETO (SEM VÍRGULA)
-    const valorFormatado = Number(valor).toFixed(2);
-
-    let payload =
-        "000201" +
-        montarCampo("26",
-            montarCampo("00", "BR.GOV.BCB.PIX") +
-            montarCampo("01", chave)
-        ) +
-        "52040000" +
-        "5303986" +
-        montarCampo("54", valorFormatado) +
-        "5802BR" +
-        montarCampo("59", nome.substring(0, 25)) + // limite PIX
-        montarCampo("60", cidade.substring(0, 15)) + // limite PIX
-        "62070503***";
-
-    function crc16(str) {
-        let crc = 0xFFFF;
-        for (let i = 0; i < str.length; i++) {
-            crc ^= str.charCodeAt(i) << 8;
-            for (let j = 0; j < 8; j++) {
-                if ((crc & 0x8000) !== 0) {
-                    crc = (crc << 1) ^ 0x1021;
-                } else {
-                    crc <<= 1;
-                }
-                crc &= 0xFFFF;
+            if (estaNaHome) {
+                reviews.style.display = "block";
+            } else {
+                reviews.style.display = "none";
             }
         }
-        return crc.toString(16).toUpperCase().padStart(4, "0");
-    }
 
-    const payloadFinal = payload + "6304";
-    const crc = crc16(payloadFinal);
+        /*chave pix copia e cola*/
 
-    return payloadFinal + crc;
-}
+        function calcularTotalFinal() {
 
+            let totalProdutos = carrinho.reduce(
+                (t, item) => t + item.precoTotal,
+                0
+            );
 
-/* =========================
-FILTRO BANDAS
-========================= */
+            if (
+                entregaSelecionada === "entrega" &&
+                totalProdutos < valorFreteGratis
+            ) {
+                return totalProdutos + taxaEntrega;
+            }
 
-
-
-function filtrarProdutos() {
-
-    let filtro = document
-        .getElementById("selectBandas")
-        .value
-        .toLowerCase()
-        .trim();
-
-    let cards = document.querySelectorAll(".card");
-
-    cards.forEach(card => {
-
-        let banda = (card.dataset.banda || "")
-            .toLowerCase()
-            .trim();
-
-        if (filtro === "todos" || banda.includes(filtro)) {
-            card.style.display = "block";
-        } else {
-            card.style.display = "none";
+            return totalProdutos;
         }
 
-    });
+        function gerarPixCopiaECola(valor) {
+            const chave = "bomdocepm@gmail.com";
+            const nome = "BOMDOCE";
+            const cidade = "PALMEIRA DAS MISSOES";
 
-    // 🔥 AQUI ESTÁ A CORREÇÃO
-    requestAnimationFrame(() => {
+            function formatar(valor) {
+                return valor.toString().padStart(2, "0");
+            }
 
-        const container = document.querySelector(".container-cards");
+            function montarCampo(id, valor) {
+                return id + formatar(valor.length) + valor;
+            }
 
-        if (!container) return;
+            // 🔥 GARANTE FORMATO CORRETO (SEM VÍRGULA)
+            const valorFormatado = Number(valor).toFixed(2);
 
-        window.scrollTo({
-            top: container.offsetTop - 100,
-            behavior: "smooth"
+            let payload =
+                "000201" +
+                montarCampo("26",
+                    montarCampo("00", "BR.GOV.BCB.PIX") +
+                    montarCampo("01", chave)
+                ) +
+                "52040000" +
+                "5303986" +
+                montarCampo("54", valorFormatado) +
+                "5802BR" +
+                montarCampo("59", nome.substring(0, 25)) + // limite PIX
+                montarCampo("60", cidade.substring(0, 15)) + // limite PIX
+                "62070503***";
+
+            function crc16(str) {
+                let crc = 0xFFFF;
+                for (let i = 0; i < str.length; i++) {
+                    crc ^= str.charCodeAt(i) << 8;
+                    for (let j = 0; j < 8; j++) {
+                        if ((crc & 0x8000) !== 0) {
+                            crc = (crc << 1) ^ 0x1021;
+                        } else {
+                            crc <<= 1;
+                        }
+                        crc &= 0xFFFF;
+                    }
+                }
+                return crc.toString(16).toUpperCase().padStart(4, "0");
+            }
+
+            const payloadFinal = payload + "6304";
+            const crc = crc16(payloadFinal);
+
+            return payloadFinal + crc;
+        }
+
+
+        /* =========================
+        FILTRO BANDAS
+        ========================= */
+
+
+
+        function filtrarProdutos() {
+
+            let filtro = document
+                .getElementById("selectBandas")
+                .value
+                .toLowerCase()
+                .trim();
+
+            let cards = document.querySelectorAll(".card");
+
+            cards.forEach(card => {
+
+                let banda = (card.dataset.banda || "")
+                    .toLowerCase()
+                    .trim();
+
+                if (filtro === "todos" || banda.includes(filtro)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+
+            });
+
+            // 🔥 AQUI ESTÁ A CORREÇÃO
+            requestAnimationFrame(() => {
+
+                const container = document.querySelector(".container-cards");
+
+                if (!container) return;
+
+                window.scrollTo({
+                    top: container.offsetTop - 100,
+                    behavior: "smooth"
+                });
+
+            });
+        }
+
+
+        function filtrarPorBanda(banda) {
+
+            document.getElementById("selectBandas").value = banda;
+
+            filtrarProdutos();
+
+            requestAnimationFrame(() => {
+
+                const container = document.querySelector(".container-cards");
+
+                if (!container) return;
+
+                const top = container.offsetTop - 100;
+
+                window.scrollTo({
+                    top: top,
+                    behavior: "smooth"
+                });
+
+            });
+        }
+
+        /*voltar ao topo*/
+
+        const btnVoltarTopo = document.getElementById('btnVoltarTopo');
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 300) {
+                btnVoltarTopo.classList.add('visivel');
+            } else {
+                btnVoltarTopo.classList.remove('visivel');
+            }
         });
 
-    });
-}
-
-
-function filtrarPorBanda(banda) {
-
-    document.getElementById("selectBandas").value = banda;
-
-    filtrarProdutos();
-
-    requestAnimationFrame(() => {
-
-        const container = document.querySelector(".container-cards");
-
-        if (!container) return;
-
-        const top = container.offsetTop - 100;
-
-        window.scrollTo({
-            top: top,
-            behavior: "smooth"
+        btnVoltarTopo.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-
-    });
-}
-
-/*voltar ao topo*/
-
-const btnVoltarTopo = document.getElementById('btnVoltarTopo');
-
-window.addEventListener('scroll', function () {
-    if (window.scrollY > 300) {
-        btnVoltarTopo.classList.add('visivel');
-    } else {
-        btnVoltarTopo.classList.remove('visivel');
-    }
-});
-
-btnVoltarTopo.addEventListener('click', function () {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
 
 
 
