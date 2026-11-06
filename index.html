@@ -1651,29 +1651,34 @@ MENU BANDAS
                     <select id="selectBandas" onchange="filtrarProdutos()">
 
                         <option value="todos">Bandas</option>
-                        <option value="iron maiden">Iron Maiden</option>
-                        <option value="metallica">Metallica</option>
-                        <option value="guns in roses">Guns</option>
                         <option value="ac/dc">AC/DC</option>
-                        <option value="anthrax">Anthrax</option>
-                        <option value="the doors">The doors</option>
-                        <option value="linkin Park">Linkin Park</option>
-                        <option value="led zeppelin">Led zeppelin</option>
-                        <option value="megadeth">Megadeth</option>
-                        <option value="slayer">Slayer</option>
-                        <option value="judas priest">Judas Priest</option>
-                        <option value="charlie brown jr">Charlie B. Jr</option>
-                        <option value="black sabbath">Black Sabbath</option>
-                        <option value="slipknot">Slipknot</option>
-                        <option value="system of a down">System of a down</option>
-                        <option value="green day">Green Day</option>
-                        <option value="korn">Korn</option>
-                        <option value="nirvana">Nirvana</option>
-                        <option value="sex pistols">Sex Pistols</option>
-                        <option value="red hot chili peppers">R.H.C.P</option>
-                        <option value="motorhead">Motorhead</option>
-                        <option value="pantera">Pantera</option>
-                        <option value="ramones">Ramones</option>
+<option value="anthrax">Anthrax</option>
+<option value="black sabbath">Black Sabbath</option>
+<option value="charlie brown jr">Charlie B. Jr</option>
+<option value="deep purple">Deep Purple</option>
+<option value="green day">Green Day</option>
+<option value="guns in roses">Guns</option>
+<option value="iron maiden">Iron Maiden</option>
+<option value="judas priest">Judas Priest</option>
+<option value="korn">Korn</option>
+<option value="led zeppelin">Led Zeppelin</option>
+<option value="linkin Park">Linkin Park</option>
+<option value="megadeth">Megadeth</option>
+<option value="metallica">Metallica</option>
+<option value="motorhead">Motorhead</option>
+<option value="nirvana">Nirvana</option>
+<option value="pantera">Pantera</option>
+<option value="queen">Queen</option>
+<option value="ramones">Ramones</option>
+<option value="red hot chili peppers">R.H.C.P</option>
+<option value="sex pistols">Sex Pistols</option>
+<option value="slayer">Slayer</option>
+<option value="slipknot">Slipknot</option>
+<option value="system of a down">System of a Down</option>
+<option value="the doors">The Doors</option>
+<option value="the police">The Police</option>
+<option value="the rolling stones">The Rolling Stones</option>
+<option value="the who">The Who</option>
 
                     </select>
                     <button id="btnHorario" onclick="abrirHorario()">Horários</button>
@@ -1902,6 +1907,45 @@ MENU BANDAS
                     </a>
                 </div>
 
+<div class="swiper-slide">
+    <a href="javascript:void(0)" onclick="filtrarPorBanda('the who')">
+        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/thewho1.jpeg?raw=true">
+        <p>The Who</p>
+    </a>
+</div>
+
+<div class="swiper-slide">
+    <a href="javascript:void(0)" onclick="filtrarPorBanda('the police')">
+        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/thepolice1.jpeg?raw=true">
+        <p>The Police</p>
+    </a>
+</div>
+
+<div class="swiper-slide">
+    <a href="javascript:void(0)" onclick="filtrarPorBanda('the rolling stones')">
+        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/rollingstones1.jpeg?raw=true">
+        <p>The Rolling Stones</p>
+    </a>
+</div>
+
+<div class="swiper-slide">
+    <a href="javascript:void(0)" onclick="filtrarPorBanda('queen')">
+        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/queen1.jpeg?raw=true">
+        <p>Queen</p>
+    </a>
+</div>
+
+<div class="swiper-slide">
+    <a href="javascript:void(0)" onclick="filtrarPorBanda('deep purple')">
+        <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/deeppurple1.jpeg?raw=true">
+        <p>Deep Purple</p>
+    </a>
+</div>
+
+
+
+
+
                 <div class="swiper-slide">
                     <a href="javascript:void(0)" onclick="filtrarPorBanda('pantera')">
                         <img
@@ -2100,6 +2144,228 @@ MENU BANDAS
                     <p class="preco"><span>Preço</span> R$60,00</p>
                 </div>
             </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------->
+
+<div class="card" data-banda="THE WHO" onclick="selecionarProduto('CAMISETA THE WHO')">
+
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/the%20who122.png?raw=true" alt="CAMISETA THE WHO">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/the%20who12.png?raw=true" alt="CAMISETA THE WHO">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="info">
+        <p class="nome-produto">CAMISETA THE WHO</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+
+<!--------------------------------------------------------------------------------------------------------------------->
+<div class="card" data-banda="THE POLICE" onclick="selecionarProduto('CAMISETA THE POLICE')">
+
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/the%20police1245.png?raw=true" alt="CAMISETA THE POLICE">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/the%20police12.png?raw=true" alt="CAMISETA THE POLICE">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="info">
+        <p class="nome-produto">CAMISETA THE POLICE</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+
+<!--------------------------------------------------------------------------------------------------------------------->
+<div class="card" data-banda="THE ROLLING STONES" onclick="selecionarProduto('CAMISETA THE ROLLING STONES')">
+
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/stones121255.png?raw=true" alt="CAMISETA THE ROLLING STONES">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/stones1212.png?raw=true" alt="CAMISETA THE ROLLING STONES">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="info">
+        <p class="nome-produto">CAMISETA THE ROLLING STONES</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+
+<!--------------------------------------------------------------------------------------------------------------------->
+<div class="card" data-banda="QUEEN" onclick="selecionarProduto('CAMISETA QUEEN')">
+
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/quenn%201223.png?raw=true" alt="CAMISETA QUEEN">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/quenn%2012.png?raw=true" alt="CAMISETA QUEEN">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="info">
+        <p class="nome-produto">CAMISETA QUEEN</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+
+<!--------------------------------------------------------------------------------------------------------------------->
+<div class="card" data-banda="IRON MAIDEN" onclick="selecionarProduto('CAMISETA IRON MAIDEN')">
+
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/iron%20maiden%20121212.png?raw=true" alt="CAMISETA IRON MAIDEN">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/iron%20maiden%20451212.png?raw=true" alt="CAMISETA IRON MAIDEN">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/iron%20maiden%201212.png?raw=true" alt="CAMISETA IRON MAIDEN">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/iron%20maiden%20121244.png?raw=true" alt="CAMISETA IRON MAIDEN">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="info">
+        <p class="nome-produto">CAMISETA IRON MAIDEN</p>
+        <p class="preco"><span>Preço</span> R$70,00</p>
+    </div>
+</div>
+
+
+<!--------------------------------------------------------------------------------------------------------------------->
+<div class="card" data-banda="IRON MAIDEN" onclick="selecionarProduto('CAMISETA IRON KILLERS')">
+
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/iron%20Killers4.png?raw=true" alt="CAMISETA IRON KILLERS">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/iron%20Killers2.png?raw=true" alt="CAMISETA IRON KILLERS">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/iron%20Killers3.png?raw=true" alt="CAMISETA IRON KILLERS">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/iron%20Killers.png?raw=true" alt="CAMISETA IRON KILLERS">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="info">
+        <p class="nome-produto">CAMISETA IRON KILLERS</p>
+        <p class="preco"><span>Preço</span> R$70,00</p>
+    </div>
+</div>
+
+
+<!--------------------------------------------------------------------------------------------------------------------->
+<div class="card" data-banda="IRON MAIDEN" onclick="selecionarProduto('CAMISETA IRON FREE OF THE DARK')">
+
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/free%20of%20the%20dark4.png?raw=true" alt="CAMISETA IRON FREE OF THE DARK">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/free%20of%20the%20dark2.png?raw=true" alt="CAMISETA IRON FREE OF THE DARK">
+            </div>
+                        <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/free%20of%20the%20dark3.png?raw=true" alt="CAMISETA IRON FREE OF THE DARK">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/iron%20free%20of%20the%20dark.png?raw=true" alt="CAMISETA IRON FREE OF THE DARK">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="info">
+        <p class="nome-produto">CAMISETA IRON FREE OF THE DARK</p>
+        <p class="preco"><span>Preço</span> R$70,00</p>
+    </div>
+</div>
+
+
+<!--------------------------------------------------------------------------------------------------------------------->
+<div class="card" data-banda="DEEP PURPLE" onclick="selecionarProduto('CAMISETA DEEP PURPLE')">
+
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/deep%20121211212.png?raw=true" alt="CAMISETA DEEP PURPLE">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/deep%2012121.png?raw=true" alt="CAMISETA DEEP PURPLE">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="info">
+        <p class="nome-produto">CAMISETA DEEP PURPLE</p>
+        <p class="preco"><span>Preço</span> R$60,00</p>
+    </div>
+</div>
+
+
+<!--------------------------------------------------------------------------------------------------------------------->
+<div class="card" data-banda="BLACK SABBATH" onclick="selecionarProduto('CAMISETA BLACK SABBATH')">
+
+    <div class="swiper produtoSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/black%20sabbath%20121115.png?raw=true" alt="CAMISETA BLACK SABBATH">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/black%20sabbath%201211154545.png?raw=true" alt="CAMISETA BLACK SABBATH">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/black%20sabbath%201211155.png?raw=true" alt="CAMISETA BLACK SABBATH">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://github.com/paginasvendas/vendadecamisetasdebandas/blob/main/IMAGENS/black%20sabbath%201211.png?raw=true" alt="CAMISETA BLACK SABBATH">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="info">
+        <p class="nome-produto">CAMISETA BLACK SABBATH</p>
+        <p class="preco"><span>Preço</span> R$70,00</p>
+    </div>
+</div>
 
 
             <!--------------------------------------------------------------------------------------------------------------------->
